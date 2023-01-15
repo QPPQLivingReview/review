@@ -5,7 +5,7 @@
 
 *Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses. As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.*
 
-[![download](https://img.shields.io/badge/download-review-blue.svg)](https://QPPQLivingReview.github.io/QPPQLivingReview/review/QPPQ.pdf)
+[![download](https://img.shields.io/badge/download-review-blue.svg)](https://QPPQLivingReview.github.io/QPPQLivingReview.github.io/review/QPPQ.pdf)
 
 The purpose of this note is to collect references for quantum algorithms already relevant to plasma physics.  A minimal number of categories is chosen in order to be as useful as possible. Note that papers may be referenced in more than one category.
 
