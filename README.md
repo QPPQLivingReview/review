@@ -1,8 +1,5 @@
 #  **QPPQ**: *a living review of Quantum Computing + Plasma Physics*
 
-
-*A recent report of the United States Department of Energy “Quantum for Fusion, Fusion for Quantum” has highlighted several opportunities for scientific discovery and technology advances at the interface of quantum computing and quantum technologies with fusion and plasma physics.*
-
 *Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses. As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.*
 
 [![download](https://img.shields.io/badge/download-review-blue.svg)](https://QPPQLivingReview.github.io/review/review/QPPQ.pdf)
