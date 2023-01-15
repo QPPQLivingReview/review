@@ -1,0 +1,222 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[margin=3cm]{geometry}
+\usepackage{physics}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{float}
+%\usepackage{caption}
+\usepackage{amsthm}
+%\usepackage{bbold}
+
+% For certain tables
+%\usepackage{multirow}
+
+%\usepackage{natbib}
+\usepackage{graphicx}
+%\usepackage{mathrsfs}
+%\usepackage{pgfplots}
+%\usepackage[most]{tcolorbox}
+%\usepackage{bm}
+%\usepackage{bbm}
+\usepackage{mathrsfs}
+%\usepackage{qcircuit}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+%\usepackage{xr-hyper}
+\PassOptionsToPackage{hyphens}{url}\usepackage[linktocpage=true, pdfencoding=auto, psdextra]{hyperref}
+\usepackage{cleveref}
+\allowdisplaybreaks
+
+\usepackage[backend=biber,style=alphabetic,sorting=anyt]{biblatex}
+%\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
+\addbibresource{QPPQ.bib}
+% hyperref included through jheppub
+\hypersetup{
+	colorlinks=false,		% Surround the links by color frames (false) or colors the text of the links (true)
+	citecolor=blue,		% Color of citation links
+	filecolor=black,		% Color of file links
+	linkcolor=red,		% Color of internal links (sections, pages, etc.)
+	urlcolor=black,		% Color of url hyperlinks
+	linkbordercolor =red, 	% Color of links to bibliography
+	citebordercolor = blue,	% Color of file links
+	urlbordercolor= blue	% Color of external links
+}
+
+\DeclareTotalTCBox{\Qtag}{ O{red} v !O{} }
+{ fontupper=\ttfamily,nobeforeafter,tcbox raise base,arc=0pt,outer arc=0pt,top=0pt,bottom=0pt,left=0mm,right=0mm,leftrule=0pt,rightrule=0pt,toprule=0.3mm,bottomrule=0.3mm,boxsep=0.5mm,colback=#1!10!white,colframe=#1!50!black,#3}{#2}
+
+\DeclareTotalTCBox{\Ttag}{ O{red} v !O{} }
+{ fontupper=\ttfamily,nobeforeafter,tcbox raise base,top=0pt,bottom=0pt,left=0mm,right=0mm,leftrule=0pt,rightrule=0pt,toprule=0pt,bottomrule=0pt,boxsep=0.7mm,colback=#1!50!black,colframe=#1!50!black,#3}{\textcolor{white}{\textbf{#2}}}
+%\usepackage{fontspec}
+
+\newcommand{\red}[1]{{\color{red}(#1)}}
+\newcommand{\blue}[1]{{\color{blue}(#1)}}
+\newcommand{\green}[1]{{\color{green!50!black}(#1)}}
+\newcommand{\orange}[1]{{\color{orange!50!black}#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Document body
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{A Living Review of  \\  Quantum Computing for Plasma Physics}
+\author{}
+\date{}
+
+\let\oldmaketitle\maketitle
+\renewcommand\maketitle{{\bfseries\boldmath\oldmaketitle}}
+
+\begin{document}
+
+\maketitle
+
+% \newcommand{\FTol}{\Qtag{FTol}}
+% \newcommand{\NISQ}{\Qtag{NISQ}}
+% \newcommand{\QIns}{\Qtag{QIns}}
+% \newcommand{\QAnn}{\Qtag{QAnn}}
+
+\begin{abstract}
+
+	% from the QPPQ webpage
+	A recent report of the United States Department of Energy “Quantum for Fusion, Fusion for Quantum” has highlighted several opportunities for scientific discovery and technology advances at the interface of quantum computing and quantum technologies with fusion and plasma physics.
+
+	% With the goal of fostering and promoting the dialogue across these two areas and to promote the interdisciplinary interaction between the researchers working in these fields, the Group of Lasers and Plasmas at IPFN, and the Physics of Information and Quantum Technologies Group at PQI and IT will host a series of monthly discussion sessions on Quantum for Plasmas $\&$ Plasmas for Quantum.
+
+	Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses.  As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.
+
+\end{abstract}
+
+\newpage
+
+The purpose of this note is to collect references for quantum algorithms already relevant to plasma physics.  A minimal number of categories is chosen in order to be as useful as possible. Note that papers may be referenced in more than one category.
+
+To facilitate search, the tags \Qtag[green]{NISQ} (noisy-intermediate scale quantum computing), \Qtag[red]{FTol} (fault-tolerant quantum computing), \Qtag[blue]{QAnn} (quantum annealing), \Qtag[gray]{QIns} (quantum-inspired), and \Qtag[white]{Tool} (generally useful tool) are applied if clearly appropriate.
+
+Color-filled tags indicate the type of content. Since most papers contain some form of theoretical analysis, we use the theoretical tag \Ttag{Theo} solely for the papers with analytical results, and no considerable numerical or experimental results. The tag \Ttag[blue]{Num} marks papers with numerical simulations, but no experimental results run on quantum devices. Finally, \Ttag[green]{Exp} marks papers with displayed experimental results. We may ommit this tag if the paper is referenced and tagged in a subsequent subsection.
+
+The fact that a paper is listed in this document does not endorse or validate its content - that is for the community (and for peer-review) to decide.  Furthermore, the classification here is a best attempt and may have flaws - please let us know if (a) we have missed a paper you think should be included, (b) a paper has been misclassified or wrongly tagged, or (c) a citation for a paper is not correct or if the journal information is now available.
+
+In order to be as useful as possible, this document will continue to evolve so please check back\footnote{See \href{http://epp.ist.utl.pt/qppq/}{http://epp.ist.utl.pt/qppq/}.} before you write your next paper.  You can simply download the .bib file to get all of the latest references. Please consider citing Ref.~\cite{qppqlivingreview} when referring to this living review.
+
+\begin{itemize}
+
+	\item \textbf{Modern Reviews}
+		\\\textit{Below are links to (static) general and specialized reviews.}
+		\begin{itemize}
+			\item Review of Plasma Physics Problems Reformulated for Quantum Computing ~\cite{dodin2020applications}
+            \item Review of Fusion Plasma Physics Problems Reformulated for Quantum Computing\cite{josephQuantumComputingFusion2022}
+		\end{itemize}
+  
+    %\item Quantum Signal Processing \Qtag[red]{FTol}~\Ttag[blue]{Num}\cite{novikau_quantum_2021}
+    
+	\item System of linear equations \Qtag[green]{NISQ}~\cite{bravo-prieto_variational_2020,huang_near-term_2019,xu_variational_2021}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{harrowQuantumAlgorithmLinear2009,claderPreconditionedQuantumLinear2013,childsQuantumAlgorithmSystems2017,wangEfficientQuantumAlgorithms2022}, \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{borleHowViableQuantum2022}, \Qtag[gray]{QIns} \Ttag[red]{Theo}~\cite{shaoFasterQuantuminspiredAlgorithms2021}.
+ 
+	\item System of nonlinear equations \Qtag[green]{NISQ}~\cite{Lubasch2020_PhysRevA.101.010301} ~\Qtag[red]{FTol} \Ttag{Theo}~\cite{dodin2021quantum} \Ttag[blue]{Num}~\cite{xueQuantumNewtonMethod2021,xueQuantumAlgorithmSolving2022}.
+		\begin{itemize}
+			\item System of polynomial equations \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{changQuantumAnnealingSystems2019}.
+		\end{itemize}
+  
+	\item Ordinary differential equations \Qtag[blue]{QAnn}~\cite{zangerQuantumAlgorithmsSolving2021}.
+		\begin{itemize}
+			\item Linear \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{berryHighorderQuantumAlgorithm2014,berryQuantumAlgorithmLinear2017,childsQuantumSpectralMethods2020,fangTimemarchingBasedQuantum2022,jinQuantumSimulationPartial2022}, \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}, \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{zangerQuantumAlgorithmsSolving2021}.
+				\begin{itemize}
+					\item Second-order \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{srivastavaBoxAlgorithmSolution2019}.
+                    \begin{itemize}
+                        \item Quantum harmonic oscillator \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{ricardoAlternativesNonhomogeneousPartial2022}.
+                    \end{itemize}
+				\end{itemize}
+			\item Nonlinear ~\Qtag[green]{NISQ} ~\cite{Kyriienko2021_PhysRevA.103.052416, PhysRevA.103.062608} ~\Qtag[red]{FTol} \Ttag{Theo}~\cite{leytonQuantumAlgorithmSolve2008,dodin2021quantum} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a,liuEfficientQuantumAlgorithm2020,suranaCarlemanLinearizationBased2022b}, ~\Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{zangerQuantumAlgorithmsSolving2021}.
+		\end{itemize}
+  
+	\item Partial differential equations \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{childsHighprecisionQuantumAlgorithms2021}, \Qtag[gray]{QIns}~\cite{garcia-ripollQuantuminspiredAlgorithmsMultivariate2021}
+		\begin{itemize}
+			\item Linear \Qtag[green]{NISQ}~\cite{omalleyNeartermQuantumAlgorithm2022}, \Qtag{FTol} \Ttag{Theo}~\cite{jinQuantumSimulationPartial2022}, \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}, \Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{criadoQadeSolvingDifferential2022}.
+				\begin{itemize}
+					\item Laguerre \Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{criadoQadeSolvingDifferential2022}.
+					\item Wave \Qtag{FTol} \Ttag[blue]{Num}~\cite{costaQuantumAlgorithmSimulating2019},\Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{criadoQadeSolvingDifferential2022}.
+					\item Non-homogeneous~\cite{bravo-prieto_variational_2020}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{arrazolaQuantumAlgorithmNonhomogeneous2019a,ricardoAlternativesNonhomogeneousPartial2022}.
+						\begin{itemize}
+                            \item Vlasov \Qtag[red]{FTol}~\Ttag[blue]{Num}~\cite{engel2020vlasov}
+							\item Poisson \Qtag[green]{NISQ}~\cite{bravo-prieto_variational_2020,sato_variational_2021,aliPerformanceStudyVariational2022,sahaAdvancingAlgorithmScale2022,Lubasch2020_PhysRevA.101.010301}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{caoQuantumAlgorithmCircuit2013},\Ttag[blue]{Num}~\cite{arrazolaQuantumAlgorithmNonhomogeneous2019a,ricardoAlternativesNonhomogeneousPartial2022,liu_variational_2021,wangQuantumFastPoisson2020}.
+						\end{itemize}
+					\item Vlasov-Poisson \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{yeQuantuminspiredMethodSolving2022} 
+     
+					\item Fokker-Planck \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}, \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{garcia-ripollQuantuminspiredAlgorithmsMultivariate2021}.
+
+                    \item Semi-classical Schrödinger \Qtag{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationSemiclassical2022}.
+
+                    \item Boltzmann \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}.
+                    
+                    \item Schrödinger-Poisson \Qtag[green]{NISQ}~\Ttag[blue]{Num}~\cite{Mocz_2021}
+                    
+                    \item Time-dependent Schrödinger \Qtag[green]{NISQ}~\cite{joubert-doriolVariationalApproachLinearly2022} \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationSemiclassical2022}.
+                    \item Stochastic PDE \Qtag[green]{NISQ} \Ttag[blue]{Num}~\cite{PhysRevA.103.052425, Alghassi2022variationalquantum}\\            
+                   \textit{Fokker-Planck equation, Feynman-Kac formula}
+
+                   \item Maxwell's \Qtag{FTol} \Ttag{Theo}~\cite{costaQuantumAlgorithmSimulating2019}, \Ttag[blue]{Num}~\cite{novikau_quantum_2021,novikauSimulationLinearNonHermitian2022}
+
+                   \item Burger's \Qtag{FTol} \Ttag[blue]{Num}~\cite{ozSolvingBurgersEquation2021}.
+
+                   \item Klein-Gordon \Qtag{FTol} \Ttag{Theo}~\cite{costaQuantumAlgorithmSimulating2019}.
+
+                   \item Heat \Qtag[green]{NISQ}~\cite{fontanela_short_2021,miyamoto_pricing_2022,leongVariationalQuantumEvolution2022a,albinoSolvingPartialDifferential2022}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{lindenQuantumVsClassical2022,jinQuantumSimulationPartial2022,jinTimeComplexityAnalysis2022a} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}.
+
+                    \item Parabolic \Qtag[gray]{QIns}~\cite{patelQuantumInspiredTensorNeural2022}.
+                    \begin{itemize}
+                        \item Black-Scholes-Barenblatt \Qtag[gray]{QIns} \Ttag[blue]{Num}\cite{patelQuantumInspiredTensorNeural2022}. \\
+                            \textit{The Black-Scholes-Barenblatt equation is a nonlinear extension to the Black-Scholes equation, which models uncertain volatility and interest rates derived from the Black-Scholes equation.}
+                        
+                        \item Hamilton-Jacobi-Bellman \Qtag[gray]{QIns} \Ttag[blue]{Num}\cite{patelQuantumInspiredTensorNeural2022}.
+                    \end{itemize}
+                    
+                    \item Hyperbolic \Qtag{FTol} \Ttag{Theo}~\cite{jinTimeComplexityAnalysis2022a,jinQuantumAlgorithmsComputing2022}.
+
+				\end{itemize}
+
+            \item Koopman–von Neumann formulation \Qtag[red]{FTol} \Ttag[red]{Theo} \cite{IlonJoseph2020,jinTimeComplexityAnalysis2022}.
+            
+            \item Nonlinear Schrödinger equation formulation \Qtag[red]{FTol} \Ttag[red]{Theo} \cite{lloyd2020quantum}
+
+            \item Nonlinear \Qtag{FTol} \Ttag{Theo}~\cite{jinQuantumAlgorithmsComputing2022}. \red{Check which are actually nonlinear.}
+            \begin{itemize}
+    			\item Black-Scholes~\cite{fontanela_short_2021,miyamoto_pricing_2022}, \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}.
+       
+    			\item Helmholtz~\cite{ewe_variational_2022}.
+    
+                \item Convection \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}.
+       
+    			\item Evolution equation \Qtag[green]{NISQ}~ \Ttag[red]{Theo}~\cite{leongVariationalQuantumEvolution2022a}.\\
+                \textit{Partial Differential Equations with time-domain.}
+       
+    			\item Reaction-diffusion \Qtag[green]{NISQ}~ \Ttag[blue]{Num}~\cite{leongVariationalQuantumEvolution2022a,demirdjianVariationalQuantumSolutions2022}, \Qtag{FTol} \Ttag[blue]{Num}~\cite{anEfficientQuantumAlgorithm2022}.
+    
+                \item Navier-Stokes \Qtag{FTol} \Ttag[blue]{Num}~\cite{gaitanFindingFlowsNavier2020}.
+                \begin{itemize}
+                    \item Incompressible \Qtag[green]{NISQ}~\cite{leongVariationalQuantumEvolution2022a}, \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{lapworthHybridQuantumClassicalCFD2022}.
+                \end{itemize}
+    
+                \item Hamilton-Jacobi \Qtag{FTol} \Ttag{Theo}~\cite{jinTimeComplexityAnalysis2022,jinQuantumAlgorithmsComputing2022}.
+            \end{itemize}
+		\end{itemize}
+
+    \item Linear embedding of nonlinear dynamical systems \Qtag[red]{FTol} \Ttag[red]{Theo} \cite{Engel2021_doi:10.1063/5.0040313,jinTimeComplexityAnalysis2022}.
+
+    \item Finite element method \Qtag{FTol} \Ttag{Theo}~\cite{montanaroQuantumAlgorithmsFinite2016}.
+  
+	\item Quantum simulation \Qtag{FTol} \Ttag{Theo}~\cite{berryHamiltonianSimulationNearly2015}.
+		\begin{itemize}
+            \item Sparse Hamiltonians \Qtag{FTol} \Ttag{Theo}~\cite{berryEfficientQuantumAlgorithms2007,berryExponentialImprovementPrecision2014}.
+			\item Imaginary time evolution \Qtag[green]{NISQ}~\cite{mcardle_variational_2019}.
+		\end{itemize}
+
+    \item Lattice Boltzmann algorithms \Qtag[red]{Ftol}~\Ttag[blue]{Num}~\cite{budinski_quantum_2021}
+    
+    \item Quantum lattice algorithms \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{andersonCommentsUnitaryQubit2022,koukoutsisDysonMapsUnitary2022,oganesovEffectFourierTransform2018,ramReflectionTransmissionElectromagnetic2021,vahalaBuildingThreedimensionalQuantum2020,vahalaEffectPauliSpin2020,vahalaOneTwodimensionalQuantum2021,vahalaOneTwodimensionalQuantum2021a,vahalaQuantumLatticeRepresentation2022a,vahalaQubitUnitaryLattice2020,vahalaQubitUnitaryLattice2020a,vahalaTwoDimensionalElectromagnetic2021,vahalaUnitaryQuantumLattice2020,vahalaUnitaryQubitLattice2019,vahala_vahala_soe_ram_2020,yepezEfficientAccurateQuantum2002,yepezRelativisticPathIntegral2005,yepezQuantumLatticeGas2016,vahalaQuantumLatticeGas2003,vahalaUnitaryQubitLattice2011,vahalaUnitaryQuantumLattice2010,oganesovBenchmarkingDiracgeneratedUnitary2016,oganesovImaginaryTimeIntegration2016,oganesovUnitaryQuantumLattice2015,Shi2018_PhysRevE.97.053206,andersonCommentsUnitaryQubit2023} \red{The citations are not ordered alphabetically, for some reason.}
+    
+    %  Quantum lattice algorithms
+    \textit{Highly parallelizable approach amenable to classical supercomputers, allowing the study of (Klein-Gordon-)Maxwell's equations, the Gross-Pitaevski equation, the nonlinear Schrödinger equation, and the KdV equation. In some cases, the method may also be suitable for fault-tolerant quantum computers.}
+
+\end{itemize}
+
+\printbibliography
+
+\end{document}
