@@ -6,9 +6,25 @@
 
 The purpose of this note is to collect references for quantum algorithms already relevant to plasma physics.  A minimal number of categories is chosen in order to be as useful as possible. Note that papers may be referenced in more than one category.
 
-To facilitate search, the tags [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() (noisy-intermediate scale quantum computing), [![download](https://img.shields.io/badge/-FTol-red)]() (fault-tolerant quantum computing), [![download](https://img.shields.io/badge/-QAnn-blue)]() (quantum annealing), [![download](https://img.shields.io/badge/-QIns-grey)]() (quantum-inspired), and [![download](https://img.shields.io/badge/-Tool-white)]() (generally useful tool) are applied if clearly appropriate.
+To facilitate search, if clearly appropriate, the following tags are applied 
 
-Color-filled tags indicate the type of content. Since most papers contain some form of theoretical analysis, we use the theoretical tag [![download](https://img.shields.io/badge/-Theo-darkred)]() solely for the papers with analytical results, and no considerable numerical or experimental results. The tag [![download](https://img.shields.io/badge/-Num-darkblue)]() marks papers with numerical simulations, but no experimental results run on quantum devices. Finally, [![download](https://img.shields.io/badge/-Exp-darkgreen)]() marks papers with displayed experimental results. We may ommit this tag if the paper is referenced and tagged in a subsequent subsection.
+* [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() __noisy-intermediate scale quantum computing__
+
+* [![download](https://img.shields.io/badge/-FTol-red)]() __fault-tolerant quantum computing__
+
+* [![download](https://img.shields.io/badge/-QAnn-blue)]() __quantum annealing__
+
+* [![download](https://img.shields.io/badge/-QIns-grey)]() __quantum-inspired__
+
+* [![download](https://img.shields.io/badge/-Tool-white)]() __generally useful tool__
+
+Color-filled tags indicate the type of content. Since most papers contain some form of theoretical analysis, we use
+
+* [![download](https://img.shields.io/badge/-Theo-darkred)]() __theoretical__ tag solely for the papers with analytical results, and no considerable numerical or experimental results
+
+* [![download](https://img.shields.io/badge/-Num-darkblue)]() marks papers with __numerical simulations__, but no experimental results run on quantum devices.
+
+* [![download](https://img.shields.io/badge/-Exp-darkgreen)]() marks papers with displayed __experimental__ results. We may ommit this tag if the paper is referenced and tagged in a subsequent subsection.
 
 The fact that a paper is listed in this document does not endorse or validate its content - that is for the community (and for peer-review) to decide.  Furthermore, the classification here is a best attempt and may have flaws - please let us know if (a) we have missed a paper you think should be included, (b) a paper has been misclassified or wrongly tagged, or (c) a citation for a paper is not correct or if the journal information is now available.
 
