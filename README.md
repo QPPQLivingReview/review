@@ -248,7 +248,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 	
 	* **Koopman–von Neumann formulation** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Jos20](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.2.043102) [JLY22c](https://arxiv.org/abs/2209.08478) [![download](https://img.shields.io/badge/-Num-darkblue)]() [Lin+22](https://arxiv.org/abs/2202.02188)
 	
-		*Koopman–von Neumann mechanics is a description of classical mechanics embedded in a Hilbert space. The dynamical equation can be written as* $$\mathrm{i} \partial_t \psi=\mathcal{H}_{\mathrm{KvN}}~\psi$$ *where the operator* $$\mathcal{H}_{\mathrm{KvN}}=-\mathrm{i} \sum_j\left(F_j \frac{\partial}{\partial x_j}+\frac{1}{2} \frac{\partial F_j}{\partial x_j}\right)$$. *Furthermore, the probability density is interpreted as* $\rho = |\psi|^2$. *Applications may include the Vlasov-Maxwell coupled system of equations.*
+		*Koopman–von Neumann mechanics is a description of classical mechanics embedded in a Hilbert space. The dynamical equation can be written as* $$i \partial_t \psi= H_\mathrm{KvN} \psi$$ *where the operator* $$H_\mathrm{KvN} = - i \sum_j \left(F_j \frac{\partial}{\partial x_j} + \frac{1}{2}  \frac{\partial F_j}{\partial x_j} \right)$$. *Furthermore, the probability density is interpreted as* $\rho = |\psi|^2$. *Applications may include the Vlasov-Maxwell coupled system of equations.*
 	
 	* **Quantum nonlinear Schrödinger linearization formulation** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Llo+20](https://arxiv.org/abs/2011.06571)
 	
