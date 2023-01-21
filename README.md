@@ -66,7 +66,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 			* **Laguerre**  [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [CS22](https://arxiv.org/abs/2204.03657)
 		
-				*The Laguerre equation is of the form* $$ x \dfrac{\mathrm{d}^2 y}{\mathrm{d} x^2} + (1-x) \dfrac{\mathrm{d} y}{\mathrm{d} x} + n ~y = 0$$
+				*The Laguerre equation is of the form* $$x \dfrac{\mathrm{d}^2 y}{\mathrm{d} x^2} + (1-x) \dfrac{\mathrm{d} y}{\mathrm{d} x} + n ~y = 0$$
 			
 	* **Nonlinear** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [KPE21](https://link.aps.org/doi/10.1103/PhysRevA.103.052416) [Shi+21](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.103.062608) [![download](https://img.shields.io/badge/-FTol-red)]() [LO08](https://arxiv.org/abs/0812.4423) [DS21](https://arxiv.org/abs/2105.07317)  [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703) [Liu+20](https://arxiv.org/abs/2011.03185) [SGS22](https://arxiv.org/abs/2212.10775) [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Zan+21](https://www.sciencedirect.com/science/article/pii/S2095927321004631)
 	
@@ -86,7 +86,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 				*The Vlasov equation models the evolution of the distribution functions of (charged) particles in a plasma system, including their long-range Coulomb interactions. It can be written in the general form*
 				
-				$$ \dfrac{\partial }{\partial t} f(x,p,t) + \dfrac{d r}{d t} \dfrac{\partial }{\partial r} f + \dfrac{d p}{d t} \dfrac{\partial }{\partial p} f = \mathcal{C}$$
+				$$\dfrac{\partial }{\partial t} f(x,p,t) + \dfrac{d r}{d t} \dfrac{\partial }{\partial r} f + \dfrac{d p}{d t} \dfrac{\partial }{\partial p} f = \mathcal{C}$$
 			
 				*where $\mathcal{C}$ is a collision term. The $dp/dt$ term can be coupled the (Electromagnetic) fields either through to the Poisson or the set of Maxwell’s equations.*
 				
@@ -94,7 +94,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 				*The Poisson equation is an elliptic PDE that relates a charge/mass density or velocity field with the electrical/gravitational potential or pressure field it originates, respectively. It takes the form*
 				
-				$$ \nabla^2 \phi(x,y,z) = f(x,y,z) $$
+				$$\nabla^2 \phi(x,y,z) = f(x,y,z)$$
 				
 				*This equation has significant applications in fluid dynamics (see Navier–Stokes equations).*
 
@@ -129,7 +129,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 	
 		*The Fokker-Planck equation for the probability density $p(x, t)$ can be written as*
 		
-		$$ \dfrac{\partial }{\partial t} p(x,t)  = - \dfrac{\partial }{\partial x} \left( \mu(x,t)~p(x,t)  \right) + \dfrac{\partial^2 }{\partial x^2} \left( D(x,t)~p(x,t)  \right)$$
+		$$\dfrac{\partial }{\partial t} p(x,t)  = - \dfrac{\partial }{\partial x} \left( \mu(x,t)~p(x,t)  \right) + \dfrac{\partial^2 }{\partial x^2} \left( D(x,t)~p(x,t) \right)$$
 		
 		*where $\mu$ and $D$ are the drift and diffusion coefficients (which may be time-dependent).*
 		
@@ -142,7 +142,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 			*The prototypical hyperbolic equation in physics, it describes oscillatory and propagating perturbations in a medium*
 			
-			$$ \partial_{tt} u(t,x) = c^2 \nabla^2 u$$
+			$$\partial_{tt} u(t,x) = c^2 \nabla^2 u$$
 			
 		* **Maxwell’s** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [CJO19](https://doi.org/10.1103/PhysRevA.99.012323) [![download](https://img.shields.io/badge/-Num-darkblue)]() [NSD21](https://arxiv.org/abs/2112.06086) [NDS22](https://arxiv.org/abs/2212.09113)
 		
@@ -160,7 +160,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 			*The Helmholtz equation is the eigenvalue problem for the Laplace operator.*
 			
-			$$ \nabla^2 f = - k^2 f$$
+			$$\nabla^2 f = - k^2 f$$
 			
 			*Important applications include wave-like phenomena and diffusion processes.*
 
@@ -197,7 +197,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 			*The Navier-Stokes equations describe the motion of viscous fluids. They describe conservation of mass and momentum and often require equations of state for pressure, temperature and density to close the system of equations.*
 			
-			$$ \partial_t \rho (x,t) + \nabla \cdot (\rho u) = 0, \frac{\partial}{\partial t}(\rho \mathbf{u})+\nabla \cdot(\rho \mathbf{u} \otimes \mathbf{u})=-\nabla p+\mu \nabla^2 \mathbf{u}+\frac{1}{3} \mu \nabla(\nabla \cdot \mathbf{u})+\rho \mathbf{g}$$
+			$$\partial_t \rho (x,t) + \nabla \cdot (\rho u) = 0, \frac{\partial}{\partial t}(\rho \mathbf{u})+\nabla \cdot(\rho \mathbf{u} \otimes \mathbf{u})=-\nabla p+\mu \nabla^2 \mathbf{u}+\frac{1}{3} \mu \nabla(\nabla \cdot \mathbf{u})+\rho \mathbf{g}$$
 			
 			* **Incompressible** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [LEK22](https://arxiv.org/abs/2204.02912) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Lap22](https://arxiv.org/abs/2206.00419)
 			
@@ -227,7 +227,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 	
 		*The Fokker-Planck equation for the probability density $p(x, t)$ can be written as*
 		
-		$$ \dfrac{\partial }{\partial t} p(x,t)  = - \dfrac{\partial }{\partial x} \left( \mu(x,t)~p(x,t)  \right) + \dfrac{\partial^2 }{\partial x^2} \left( D(x,t)~p(x,t)  \right)$$
+		$$\dfrac{\partial }{\partial t} p(x,t)  = - \dfrac{\partial }{\partial x} \left( \mu(x,t)~p(x,t)  \right) + \dfrac{\partial^2 }{\partial x^2} \left( D(x,t)~p(x,t)  \right)$$
 		
 		*where $\mu$ and $D$ are the drift and diffusion coefficients (which may be time-dependent).*
 		
@@ -235,7 +235,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 
 		*The linear Boltzmann or Rate equation is a stochastic integro-differential equation for the probability density p(x, t) can be written as*
 		
-		$$ \dfrac{d }{d t} p(x,t)  = \int p(x',t) W(x,x') dx' - p(x,t) \int W(x',x) dx' $$
+		$$\dfrac{d }{d t} p(x,t)  = \int p(x',t) W(x,x') dx' - p(x,t) \int W(x',x) dx' $$
 		
 		*where $W(x,x′)$ is the probability rate of transition from state $x′$ to state $x$, where $dp/dt$ can include partial derivatives of $p(x, t)$.*
 
