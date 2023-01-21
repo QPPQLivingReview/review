@@ -2,7 +2,7 @@
 
 *Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses. As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.*
 
-[![download](https://img.shields.io/badge/download-review-blue.svg)](https://QPPQLivingReview.github.io/review/review/QPPQ.pdf)
+[![download](https://img.shields.io/badge/download-review-blue.svg)](https://QPPQLivingReview.github.io/review/review/QPPQreview.pdf)
 
 The purpose of this note is to collect references for quantum algorithms already relevant to plasma physics.  A minimal number of categories is chosen in order to be as useful as possible. Note that papers may be referenced in more than one category.
 
@@ -15,8 +15,6 @@ To facilitate search, if clearly appropriate, the following tags are applied
 * [![download](https://img.shields.io/badge/-QAnn-blue)]() __quantum annealing__
 
 * [![download](https://img.shields.io/badge/-QIns-grey)]() __quantum-inspired__
-
-* [![download](https://img.shields.io/badge/-Tool-white)]() __generally useful tool__
 
 Color-filled tags indicate the type of content. Since most papers contain some form of theoretical analysis, we use
 
