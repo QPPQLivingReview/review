@@ -1,6 +1,6 @@
 #  **QPPQ**: *a living review of Quantum Computing + Plasma Physics*
 
-<script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script><textarea>
+<script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script>
 
 *Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses. As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.*
 
