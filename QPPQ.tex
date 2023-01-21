@@ -1,35 +1,25 @@
 \documentclass[12pt,letterpaper]{article}
 \usepackage[margin=3cm]{geometry}
 \usepackage{physics}
-\usepackage{amssymb}
-\usepackage{amsmath}
+\usepackage{amssymb,amsmath,amsthm}
 \usepackage{float}
-%\usepackage{caption}
-\usepackage{amsthm}
-%\usepackage{bbold}
-
-% For certain tables
-%\usepackage{multirow}
-
-%\usepackage{natbib}
 \usepackage{graphicx}
-%\usepackage{mathrsfs}
-%\usepackage{pgfplots}
-%\usepackage[most]{tcolorbox}
-%\usepackage{bm}
-%\usepackage{bbm}
 \usepackage{mathrsfs}
-%\usepackage{qcircuit}
 \usepackage{xcolor}
+\usepackage{enumitem}
+%\usepackage{pifont}
+\usepackage{multicol}
 \usepackage[most]{tcolorbox}
-%\usepackage{xr-hyper}
 \PassOptionsToPackage{hyphens}{url}\usepackage[linktocpage=true, pdfencoding=auto, psdextra]{hyperref}
 \usepackage{cleveref}
+%\usepackage{refcheck}
 \allowdisplaybreaks
+\setlist[itemize]{left=0pt..1em}
 
 \usepackage[backend=biber,style=alphabetic,sorting=anyt]{biblatex}
 %\usepackage[backend=biber,style=numeric,sorting=none]{biblatex}
 \addbibresource{QPPQ.bib}
+\addbibresource{extra.bib}
 % hyperref included through jheppub
 \hypersetup{
 	colorlinks=false,		% Surround the links by color frames (false) or colors the text of the links (true)
@@ -45,14 +35,22 @@
 \DeclareTotalTCBox{\Qtag}{ O{red} v !O{} }
 { fontupper=\ttfamily,nobeforeafter,tcbox raise base,arc=0pt,outer arc=0pt,top=0pt,bottom=0pt,left=0mm,right=0mm,leftrule=0pt,rightrule=0pt,toprule=0.3mm,bottomrule=0.3mm,boxsep=0.5mm,colback=#1!10!white,colframe=#1!50!black,#3}{#2}
 
+% \DeclareTotalTCBox{\Ttag}{ O{red} v !O{} }
+% { fontupper=\ttfamily,nobeforeafter,tcbox raise base,top=0pt,bottom=0pt,left=0mm,right=0mm,leftrule=0pt,rightrule=0pt,toprule=0pt,bottomrule=0pt,boxsep=0.7mm,colback=#1!50!black,colframe=#1!50!black,#3}{\textcolor{white}{\textbf{#2}}}
+
 \DeclareTotalTCBox{\Ttag}{ O{red} v !O{} }
-{ fontupper=\ttfamily,nobeforeafter,tcbox raise base,top=0pt,bottom=0pt,left=0mm,right=0mm,leftrule=0pt,rightrule=0pt,toprule=0pt,bottomrule=0pt,boxsep=0.7mm,colback=#1!50!black,colframe=#1!50!black,#3}{\textcolor{white}{\textbf{#2}}}
+{ fontupper=\ttfamily,nobeforeafter,tcbox raise base,top=0pt,bottom=0pt,left=0mm,right=0mm,leftrule=0pt,rightrule=0pt,toprule=0pt,bottomrule=0pt,boxsep=0.7mm,colback=#1!5!white,colframe=#1!50!black,#3}{#2}
 %\usepackage{fontspec}
 
 \newcommand{\red}[1]{{\color{red}(#1)}}
 \newcommand{\blue}[1]{{\color{blue}(#1)}}
 \newcommand{\green}[1]{{\color{green!50!black}(#1)}}
 \newcommand{\orange}[1]{{\color{orange!50!black}#1}}
+
+% \renewcommand{\labelitemi}{{\tiny\ding{110}}}
+% \renewcommand{\labelitemii}{\tiny\ding{108}}
+% \renewcommand{\labelitemiii}{\tiny\ding{228}}
+% \renewcommand{\labelitemiv}{\tiny\ding{70}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Document body
@@ -76,9 +74,6 @@
 
 \begin{abstract}
 
-	% from the QPPQ webpage
-	A recent report of the United States Department of Energy “Quantum for Fusion, Fusion for Quantum” has highlighted several opportunities for scientific discovery and technology advances at the interface of quantum computing and quantum technologies with fusion and plasma physics.
-
 	% With the goal of fostering and promoting the dialogue across these two areas and to promote the interdisciplinary interaction between the researchers working in these fields, the Group of Lasers and Plasmas at IPFN, and the Physics of Information and Quantum Technologies Group at PQI and IT will host a series of monthly discussion sessions on Quantum for Plasmas $\&$ Plasmas for Quantum.
 
 	Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses.  As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.
@@ -89,134 +84,296 @@
 
 The purpose of this note is to collect references for quantum algorithms already relevant to plasma physics.  A minimal number of categories is chosen in order to be as useful as possible. Note that papers may be referenced in more than one category.
 
-To facilitate search, the tags \Qtag[green]{NISQ} (noisy-intermediate scale quantum computing), \Qtag[red]{FTol} (fault-tolerant quantum computing), \Qtag[blue]{QAnn} (quantum annealing), \Qtag[gray]{QIns} (quantum-inspired), and \Qtag[white]{Tool} (generally useful tool) are applied if clearly appropriate.
+To facilitate search, if clearly appropriate, the following tags are applied
 
-Color-filled tags indicate the type of content. Since most papers contain some form of theoretical analysis, we use the theoretical tag \Ttag{Theo} solely for the papers with analytical results, and no considerable numerical or experimental results. The tag \Ttag[blue]{Num} marks papers with numerical simulations, but no experimental results run on quantum devices. Finally, \Ttag[green]{Exp} marks papers with displayed experimental results. We may ommit this tag if the paper is referenced and tagged in a subsequent subsection.
+ \begin{itemize}
+
+    \item \Qtag[green]{NISQ} noisy-intermediate scale quantum computing
+
+    \item \Qtag[red]{FTol} fault-tolerant quantum computing
+
+    \item \Qtag[blue]{QAnn} quantum annealing
+
+    \item \Qtag[gray]{QIns} quantum-inspired
+
+ \end{itemize}
+
+ Color-filled tags indicate the type of content. Since most papers contain some form of theoretical analysis, we use the following tags
+
+\begin{itemize}
+    \item \Ttag{Theo} \textbf{theoretical} tag solely for the papers with analytical results, and no considerable numerical or experimental results
+    \item  \Ttag[blue]{Num} marks papers with \textbf{numerical simulations}, but no experimental results run on quantum devices
+    \item \Ttag[green]{Exp} marks papers with displayed \textbf{experimental results}.
+\end{itemize}
+We may omit tags if the paper is referenced and tagged in a subsequent subsection, or the paper is an overview of some topic, and covers many different approaches.
 
 The fact that a paper is listed in this document does not endorse or validate its content - that is for the community (and for peer-review) to decide.  Furthermore, the classification here is a best attempt and may have flaws - please let us know if (a) we have missed a paper you think should be included, (b) a paper has been misclassified or wrongly tagged, or (c) a citation for a paper is not correct or if the journal information is now available.
 
-In order to be as useful as possible, this document will continue to evolve so please check back\footnote{See \href{http://epp.ist.utl.pt/qppq/}{http://epp.ist.utl.pt/qppq/}.} before you write your next paper.  You can simply download the .bib file to get all of the latest references. Please consider citing Ref.~\cite{qppqlivingreview} when referring to this living review.
+In order to be as useful as possible, this document will continue to evolve so please check back 
+%&\footnote{See \href{http://epp.ist.utl.pt/qppq/}{http://epp.ist.utl.pt/qppq/}.}
+before you write your next paper. You can simply download the .bib file to get all of the latest references. Please consider citing Ref.~\cite{qppqlivingreview} when referring to this living review.
 
-\begin{itemize}
+\begin{itemize} 
 
 	\item \textbf{Modern Reviews}
 		\\\textit{Below are links to (static) general and specialized reviews.}
-		\begin{itemize}
-			\item Review of Plasma Physics Problems Reformulated for Quantum Computing ~\cite{dodin2020applications}
-            \item Review of Fusion Plasma Physics Problems Reformulated for Quantum Computing\cite{josephQuantumComputingFusion2022}
+		\begin{itemize} 
+			\item Applications of Quantum Computing to Plasma Simulations \cite{dodinApplicationsQuantumComputing2021}.
+            \item Quantum Computing for Fusion Energy Science Applications \cite{josephQuantumComputingFusion2022a}.
 		\end{itemize}
-  
-    %\item Quantum Signal Processing \Qtag[red]{FTol}~\Ttag[blue]{Num}\cite{novikau_quantum_2021}
     
-	\item System of linear equations \Qtag[green]{NISQ}~\cite{bravo-prieto_variational_2020,huang_near-term_2019,xu_variational_2021}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{harrowQuantumAlgorithmLinear2009,claderPreconditionedQuantumLinear2013,childsQuantumAlgorithmSystems2017,wangEfficientQuantumAlgorithms2022}, \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{borleHowViableQuantum2022}, \Qtag[gray]{QIns} \Ttag[red]{Theo}~\cite{shaoFasterQuantuminspiredAlgorithms2021}.
+	\item \textbf{System of linear equations} \Qtag[green]{NISQ} \Ttag[blue]{Num}~\cite{huangNeartermQuantumAlgorithms2021} \Ttag[green]{Exp}\cite{bravo-prietoVariationalQuantumLinear2020,xuVariationalAlgorithmsLinear2021}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{harrowQuantumAlgorithmLinear2009,claderPreconditionedQuantumLinear2013,childsQuantumAlgorithmSystems2017,wangEfficientQuantumAlgorithms2022}, \Qtag[blue]{QAnn} \Ttag{Num}~\cite{subasiQuantumAlgorithmsSystems2019}, \Ttag[green]{Exp}~\cite{borleHowViableQuantum2022}, \Qtag[gray]{QIns} \Ttag[red]{Theo}~\cite{shaoFasterQuantuminspiredAlgorithms2021}.
+    \\\emph{Many problems in plasma physics may be formulated, either exactly or approximately, as a problem of the form $A x = b$, where $A$ and $b$ encode the information about the system (including its initial conditions, if applicable), and the goal is to compute $x$, which encodes the desired data.}
  
-	\item System of nonlinear equations \Qtag[green]{NISQ}~\cite{Lubasch2020_PhysRevA.101.010301} ~\Qtag[red]{FTol} \Ttag{Theo}~\cite{dodin2021quantum} \Ttag[blue]{Num}~\cite{xueQuantumNewtonMethod2021,xueQuantumAlgorithmSolving2022}.
-		\begin{itemize}
-			\item System of polynomial equations \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{changQuantumAnnealingSystems2019}.
+	\item \textbf{System of nonlinear equations} ~\Qtag[red]{FTol} \Ttag{Theo}~\cite{dodinQuantumComputationNonlinear2021} \Ttag[blue]{Num}~\cite{xueQuantumNewtonMethod2021,xueQuantumAlgorithmSolving2022}.
+    \\\emph{Nonlinear equations depend nonlinearly on $x$, and they are generally much harder to solve. As quantum mechanics is inherently linear, many techniques rely on mapping the original nonlinear problem to a (usually approximate) linear one, that is easier to solve.}
+		\begin{itemize} 
+			\item \textbf{System of polynomial equations} \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{changQuantumAnnealingSystems2019}.
+   
+            \emph{System where each equation is a polynomial.}
 		\end{itemize}
   
-	\item Ordinary differential equations \Qtag[blue]{QAnn}~\cite{zangerQuantumAlgorithmsSolving2021}.
-		\begin{itemize}
-			\item Linear \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{berryHighorderQuantumAlgorithm2014,berryQuantumAlgorithmLinear2017,childsQuantumSpectralMethods2020,fangTimemarchingBasedQuantum2022,jinQuantumSimulationPartial2022}, \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}, \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{zangerQuantumAlgorithmsSolving2021}.
-				\begin{itemize}
-					\item Second-order \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{srivastavaBoxAlgorithmSolution2019}.
-                    \begin{itemize}
-                        \item Quantum harmonic oscillator \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{ricardoAlternativesNonhomogeneousPartial2022}.
-                    \end{itemize}
-				\end{itemize}
-			\item Nonlinear ~\Qtag[green]{NISQ} ~\cite{Kyriienko2021_PhysRevA.103.052416, PhysRevA.103.062608} ~\Qtag[red]{FTol} \Ttag{Theo}~\cite{leytonQuantumAlgorithmSolve2008,dodin2021quantum} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a,liuEfficientQuantumAlgorithm2020,suranaCarlemanLinearizationBased2022b}, ~\Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{zangerQuantumAlgorithmsSolving2021}.
-		\end{itemize}
-  
-	\item Partial differential equations \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{childsHighprecisionQuantumAlgorithms2021}, \Qtag[gray]{QIns}~\cite{garcia-ripollQuantuminspiredAlgorithmsMultivariate2021}
-		\begin{itemize}
-			\item Linear \Qtag[green]{NISQ}~\cite{omalleyNeartermQuantumAlgorithm2022}, \Qtag{FTol} \Ttag{Theo}~\cite{jinQuantumSimulationPartial2022}, \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}, \Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{criadoQadeSolvingDifferential2022}.
-				\begin{itemize}
-					\item Laguerre \Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{criadoQadeSolvingDifferential2022}.
-					\item Wave \Qtag{FTol} \Ttag[blue]{Num}~\cite{costaQuantumAlgorithmSimulating2019},\Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{criadoQadeSolvingDifferential2022}.
-					\item Non-homogeneous~\cite{bravo-prieto_variational_2020}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{arrazolaQuantumAlgorithmNonhomogeneous2019a,ricardoAlternativesNonhomogeneousPartial2022}.
-						\begin{itemize}
-                            \item Vlasov \Qtag[red]{FTol}~\Ttag[blue]{Num}~\cite{engel2020vlasov}
-							\item Poisson \Qtag[green]{NISQ}~\cite{bravo-prieto_variational_2020,sato_variational_2021,aliPerformanceStudyVariational2022,sahaAdvancingAlgorithmScale2022,Lubasch2020_PhysRevA.101.010301}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{caoQuantumAlgorithmCircuit2013},\Ttag[blue]{Num}~\cite{arrazolaQuantumAlgorithmNonhomogeneous2019a,ricardoAlternativesNonhomogeneousPartial2022,liu_variational_2021,wangQuantumFastPoisson2020}.
-						\end{itemize}
-					\item Vlasov-Poisson \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{yeQuantuminspiredMethodSolving2022} 
-     
-					\item Fokker-Planck \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}, \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{garcia-ripollQuantuminspiredAlgorithmsMultivariate2021}.
+	\item \textbf{Ordinary differential equations (ODEs)} \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{zangerQuantumAlgorithmsSolving2021}.
+    \\\emph{Many plasma systems can be described by ordinary differential equations. Some techniques attempt to solve them directly, while others map the ODE to (larger) systems of linear equations, and solve those.}
+		\begin{itemize} 
+			\item \textbf{Linear} \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{berryHighorderQuantumAlgorithm2014,berryQuantumAlgorithmLinear2017,childsQuantumSpectralMethods2020,fangTimemarchingBasedQuantum2022,jinQuantumSimulationPartial2022}, \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}, \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{zangerQuantumAlgorithmsSolving2021}.
 
-                    \item Semi-classical Schrödinger \Qtag{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationSemiclassical2022}.
-
-                    \item Boltzmann \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}.
-                    
-                    \item Schrödinger-Poisson \Qtag[green]{NISQ}~\Ttag[blue]{Num}~\cite{Mocz_2021}
-                    
-                    \item Time-dependent Schrödinger \Qtag[green]{NISQ}~\cite{joubert-doriolVariationalApproachLinearly2022} \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationSemiclassical2022}.
-                    \item Stochastic PDE \Qtag[green]{NISQ} \Ttag[blue]{Num}~\cite{PhysRevA.103.052425, Alghassi2022variationalquantum}\\            
-                   \textit{Fokker-Planck equation, Feynman-Kac formula}
-
-                   \item Maxwell's \Qtag{FTol} \Ttag{Theo}~\cite{costaQuantumAlgorithmSimulating2019}, \Ttag[blue]{Num}~\cite{novikau_quantum_2021,novikauSimulationLinearNonHermitian2022}
-
-                   \item Burger's \Qtag{FTol} \Ttag[blue]{Num}~\cite{ozSolvingBurgersEquation2021}.
-
-                   \item Klein-Gordon \Qtag{FTol} \Ttag{Theo}~\cite{costaQuantumAlgorithmSimulating2019}.
-
-                   \item Heat \Qtag[green]{NISQ}~\cite{fontanela_short_2021,miyamoto_pricing_2022,leongVariationalQuantumEvolution2022a,albinoSolvingPartialDifferential2022}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{lindenQuantumVsClassical2022,jinQuantumSimulationPartial2022,jinTimeComplexityAnalysis2022a} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}.
-
-                    \item Parabolic \Qtag[gray]{QIns}~\cite{patelQuantumInspiredTensorNeural2022}.
-                    \begin{itemize}
-                        \item Black-Scholes-Barenblatt \Qtag[gray]{QIns} \Ttag[blue]{Num}\cite{patelQuantumInspiredTensorNeural2022}. \\
-                            \textit{The Black-Scholes-Barenblatt equation is a nonlinear extension to the Black-Scholes equation, which models uncertain volatility and interest rates derived from the Black-Scholes equation.}
-                        
-                        \item Hamilton-Jacobi-Bellman \Qtag[gray]{QIns} \Ttag[blue]{Num}\cite{patelQuantumInspiredTensorNeural2022}.
-                    \end{itemize}
-                    
-                    \item Hyperbolic \Qtag{FTol} \Ttag{Theo}~\cite{jinTimeComplexityAnalysis2022a,jinQuantumAlgorithmsComputing2022}.
-
-				\end{itemize}
-
-            \item Koopman–von Neumann formulation \Qtag[red]{FTol} \Ttag[red]{Theo} \cite{IlonJoseph2020,jinTimeComplexityAnalysis2022}.
+            \textit{As quantum mechanics is inherently linear, linear ODEs are often more straightforward to solve with quantum computers than nonlinear ones.}
             
-            \item Nonlinear Schrödinger equation formulation \Qtag[red]{FTol} \Ttag[red]{Theo} \cite{lloyd2020quantum}
+				\begin{itemize} 
+					\item \textbf{Second-order} \Qtag[blue]{QAnn} \Ttag[green]{Exp}~\cite{srivastavaBoxAlgorithmSolution2019}.
 
-            \item Nonlinear \Qtag{FTol} \Ttag{Theo}~\cite{jinQuantumAlgorithmsComputing2022}. \red{Check which are actually nonlinear.}
-            \begin{itemize}
-    			\item Black-Scholes~\cite{fontanela_short_2021,miyamoto_pricing_2022}, \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}.
+                    \textit{The highest derivative appearing in these ODEs is the second derivative.}
+                    
+                    \begin{itemize} 
+                        \item \textbf{Quantum harmonic oscillator} \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{ricardoAlternativesNonhomogeneousPartial2022}.
+
+                        \textit{Here, the time-independent Schrödinger equation has a Hamiltonian with a potential proportional to $x^2$.}
+
+                        \item \textbf{Laguerre} \Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{criadoQadeSolvingDifferential2022}.
+
+                        \textit{The Laguerre equation is of the form $$x\dv[2]{y}{x}+(1-x)\dv{y}{x} + ny=0.$$}
+                    \end{itemize}
+				\end{itemize}
+			\item \textbf{Nonlinear} ~\Qtag[green]{NISQ} ~\cite{kyriienkoSolvingNonlinearDifferential2021, shiSimulatingNonnativeCubic2021} ~\Qtag[red]{FTol} \Ttag{Theo}~\cite{leytonQuantumAlgorithmSolve2008,dodinQuantumComputationNonlinear2021,lloydQuantumAlgorithmNonlinear2020} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a,liuEfficientQuantumAlgorithm2021,suranaCarlemanLinearizationBased2022b}, ~\Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{zangerQuantumAlgorithmsSolving2021}.
+
+            \textit{There is no general reliable procedure to solve nonlinear ODEs, but some methods have been proposed.}
+		\end{itemize}
+  
+	\item \textbf{Partial differential equations (PDEs)} \Qtag[green]{NISQ}~\cite{garcia-molinaQuantumFourierAnalysis2022}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{childsHighprecisionQuantumAlgorithms2021,kroviImprovedQuantumAlgorithms2022}, \Qtag[gray]{QIns}~\cite{garcia-ripollQuantuminspiredAlgorithmsMultivariate2021}.
+    \\\emph{In general, plasma systems are described by partial differential equations. Although some of the equations presented here do not commonly describe plasma systems, the techniques employed to solve them are often general enough that they could be adapted to tackle plasma PDEs.\\
+    For ease of search, PDEs arising from stochastic processes are indicated both here and in the following section.}
+		\begin{itemize} 
+			\item \textbf{Linear} \Qtag[green]{NISQ}~\cite{omalleyNeartermQuantumAlgorithm2022}, \Qtag{FTol} \Ttag{Theo}~\cite{jinQuantumSimulationPartial2022}, \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}, \Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{criadoQadeSolvingDifferential2022}.
+				\begin{itemize} 
+					\item \textbf{Non-homogeneous} \Qtag[green]{NISQ} \Ttag[green]{Exp}~\cite{bravo-prietoVariationalQuantumLinear2020}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{arrazolaQuantumAlgorithmNonhomogeneous2019,ricardoAlternativesNonhomogeneousPartial2022}.
+						\begin{itemize} 
+                            \item \textbf{Vlasov} \Qtag[red]{FTol}~\Ttag[blue]{Num}~\cite{engelQuantumAlgorithmVlasov2019}.
+
+                            \textit{The Vlasov equation models the evolution of the distribution functions of (charged) particles in a plasma system, including their long-range Coulomb interactions. It can be written in the general form}
+                            $$ \dfrac{\partial }{\partial t} f(x,p,t) + \dfrac{d r}{d t} \dfrac{\partial }{\partial r} f + \dfrac{d p}{d t} \dfrac{\partial }{\partial p} f = \mathcal{C}$$
+                            \textit{where $\mathcal{C}$ is a collision term. The $dp/dt$ term can be coupled the (Electromagnetic) fields either through to the Poisson or the set of Maxwell's equations.}
+                            
+							\item \textbf{Poisson} \Qtag[green]{NISQ}~\cite{bravo-prietoVariationalQuantumLinear2020,satoVariationalQuantumAlgorithm2021,aliPerformanceStudyVariational2022,sahaAdvancingAlgorithmScale2022,lubaschVariationalQuantumAlgorithms2020}, \Ttag[green]{Exp}~\cite{cuiOptimizationNoiseAnalysis2022}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{caoQuantumAlgorithmCircuit2013}, \Ttag[blue]{Num}~\cite{arrazolaQuantumAlgorithmNonhomogeneous2019,ricardoAlternativesNonhomogeneousPartial2022,liuVariationalQuantumAlgorithm2021,wangQuantumFastPoisson2020}.
+
+                          \textit{The Poisson equation is an elliptic PDE that relates a charge/mass density or velocity field with the electrical/gravitational potential or pressure field it originates, respectively. It takes the form}
+                        $$ \nabla^2 \phi(x,y,z) = f(x,y,z) $$
+                        \textit{This equation has significant applications in fluid dynamics (see Navier–Stokes equations).}
        
-    			\item Helmholtz~\cite{ewe_variational_2022}.
+						\end{itemize}
+
+                    \item \textbf{Semi-classical Schrödinger} \Qtag{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationSemiclassical2022}.
+                    
+                    \textit{The semi-classical regime of the Schrödinger equation corresponds to the case when $\hbar \ll 1$. Possible applications include: quantum chemistry, including Born-Oppenheimer molecular dynamics and Ehrenfest dynamics.}
+                    
+                    \item \textbf{Time-dependent Schrödinger} \Qtag[green]{NISQ}~\cite{joubert-doriolVariationalApproachLinearly2022} \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationSemiclassical2022}.
+
+                    \textit{Many problems can be mapped to the Schrödinger equation $$\mathrm{i}\hbar \dv{t} \ket{\psi(t)} = H\ket{\psi(t)}$$ described by some Hamiltonian $H$. Solving the Schrödinger equation can often be done much more efficiently with quantum computers.}
+
+                    \item \textbf{Parabolic} \Qtag[gray]{QIns}~ \Ttag[blue]{Num} \cite{patelQuantumInspiredTensorNeural2022}.
+                    \begin{itemize} 
+
+                        \item \textbf{Heat/Convection} \Qtag[green]{NISQ}~\cite{leongVariationalQuantumEvolution2022,albinoSolvingPartialDifferential2022}, \Ttag[blue]{Num}~\cite{liuApplicationVariationalHybrid2022}, \Qtag[red]{FTol} \Ttag[red]{Theo}~\cite{lindenQuantumVsClassical2022,jinQuantumSimulationPartial2022,jinTimeComplexityAnalysis2022a} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}.
+
+                        \textit{The prototypical parabolic linear PDE. This equation describes the diffusion of heat in a material}
+
+                        $$\partial_t u(t,x) = \alpha \Delta u $$
+                        \textit{where $\alpha$ is the thermal diffusivity. Its applications are of fundamental importance in most branches of physics and engineering. }
+                    
+            			\item \textbf{Black-Scholes} \Qtag[green]{NISQ}~\cite{fontanelaShortCommunicationQuantum2021,miyamotoPricingMultiAssetDerivatives2022}, \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a,anQuantumacceleratedMultilevelMonte2021}.
+               
+                        \textit{The Black–Scholes equation is a PDE which describes the price of the option $V(S,t)$ over time $t$ and price of underlying asset $S(t)$,$r$ is the "force of interest", $\mu$ is the annualized drift rate of $S$, and $\sigma$ is the standard deviation of the stock's returns.}
+                        $$
+                        \frac{\partial V}{\partial t}+\frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2}+r S \frac{\partial V}{\partial S}-r V=0
+                        $$
+
+                        \item \textbf{Fokker-Planck} \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}, \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{garcia-ripollQuantuminspiredAlgorithmsMultivariate2021}.
+                        
+                        \textit{The Fokker-Planck equation for the probability density $p(x,t)$ can be written as}
+                        $$ \dfrac{\partial }{\partial t} p(x,t)  = - \dfrac{\partial }{\partial x} \left( \mu(x,t)~p(x,t)  \right) + \dfrac{\partial^2 }{\partial x^2} \left( D(x,t)~p(x,t)  \right)$$
+                        \textit{where $\mu$ and $D$ are the drift and diffusion coefficients (which may be time-dependent).}
+                        
+                        \item \textbf{Hamilton-Jacobi-Bellman} \Qtag[gray]{QIns} \Ttag[blue]{Num}\cite{patelQuantumInspiredTensorNeural2022}.
+                    \end{itemize} 
+
+                    
+     
+                    \item \textbf{Hyperbolic/Wave-related} \Qtag{FTol} \Ttag{Theo}~\cite{jinTimeComplexityAnalysis2022a,jinQuantumAlgorithmsComputing2022}.
+                         \begin{itemize} 
+                             \item \textbf{Wave} \Qtag{FTol} \Ttag[blue]{Num}~\cite{costaQuantumAlgorithmSimulating2019,suauPracticalQuantumComputing2021}, \Qtag[blue]{QAnn} \Ttag[blue]{Num}~\cite{criadoQadeSolvingDifferential2022}.
+
+                             \textit{The prototypical hyperbolic equation in physics, it describes oscillatory and propagating perturbations in a medium}
+
+                             $$ \partial_{tt} u(t,x) = c^2 \nabla^2 u$$
+                         
+                            \item \textbf{Maxwell's} \Qtag{FTol} \Ttag{Theo}~\cite{costaQuantumAlgorithmSimulating2019}, \Ttag[blue]{Num}~\cite{novikauQuantumSignalProcessing2022,novikauSimulationLinearNonHermitian2022}.
+                            
+                            \textit{The Maxwell equations are a set of coupled PDEs that are foundational to the modeling of electromagnetic phenomena, which important applications in fundamental physics, classical optics and electric circuits.}
+                            
+                            $$\nabla \cdot \mathbf{E}=\frac{\rho}{\varepsilon_0}, \nabla \cdot \mathbf{B}=0, \nabla \times \mathbf{E}=-\frac{\partial \mathbf{B}}{\partial t}, \nabla \times \mathbf{B}=\mu_0\left(\mathbf{J}+\varepsilon_0 \frac{\partial \mathbf{E}}{\partial t}\right)$$
+
+                           \item \textbf{Klein-Gordon} \Qtag{FTol} \Ttag{Theo}~\cite{costaQuantumAlgorithmSimulating2019}.
+
+                            \textit{The Klein-Gordon relativistic wave equation is a 2nd order equation both in space and time}
+
+                            $$
+                                \left(\frac{1}{c^2} \frac{\partial^2}{\partial t^2}-\nabla^2+\frac{m^2 c^2}{\hbar^2}\right) \psi(t, \mathbf{x})=0
+                            $$
+                           
+                           \item \textbf{Helmholtz} \Qtag[green]{NISQ} \Ttag[blue]{Num} ~\cite{eweVariationalQuantumBasedSimulation2022}.
+
+                            \textit{The Helmholtz equation is the eigenvalue problem for the Laplace operator}
+                            
+                           $$ \nabla^2 f = - k^2 f$$
+                           
+                           \textit{Important applications include wave-like phenomena and diffusion processes.}
+                           
+                         \end{itemize}  
+
+				\end{itemize}
+
+            \item \textbf{Nonlinear} \Qtag{FTol} \Ttag{Theo}~\cite{jinQuantumAlgorithmsComputing2022,linKoopmanNeumannMechanics2022}.
+            
+            \begin{itemize} 
+            
+    			    \item \textbf{Evolution equation} \Qtag[green]{NISQ}~ \Ttag[red]{Theo}~\cite{leongVariationalQuantumEvolution2022}.
+                
+                    \textit{General class of PDEs with time-domain.}
+            
+					\item \textbf{Vlasov-Poisson} \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{yeQuantuminspiredMethodSolving2022}. 
+
+                    \textit{The coupled Vlasov-Poisson system describes the self-consistent evolution of charges and their (electrical) potentials. Because of this, the system is nonlinear. }
+                    
+                    \item \textbf{Schrödinger-Poisson} \Qtag[green]{NISQ}~\Ttag[blue]{Num}~\cite{moczCosmologicalSimulationsDark2021}.
+
+                    \textit{Similar to the Vlasov-Poisson system, the Schrödinger-Poisson equation attempts to describe the self-consistent evolution of a wave-function and a potential.}
+
+                    \item \textbf{Nonlinear-Schrödinger} \Qtag[green]{NISQ} \Ttag[blue]{Num}~\cite{garcia-molinaQuantumFourierAnalysis2022}, \Ttag[green]{Exp}~\cite{lubaschVariationalQuantumAlgorithms2020}.
+                    
+                    \textit{Similar to the Schrödinger-Poisson system, however the potential is created by the square absolute value of the wave-function $V=|\psi|^2$, which induces a cubic nonlinearity in the equations.}
+                    
+                   \item \textbf{Burger's} \Qtag[green]{NISQ} \Ttag[green]{Exp}~\cite{zylbermanHybridQuantumClassicalAlgorithm2022}, \Qtag{FTol} \Ttag[blue]{Num}~\cite{ozSolvingBurgersEquation2021}.
+                   
+                   \textit{This nonlinear PDE with a quadratic nonlinearity is of fundamental importance to fluid dynamics and in particular in plasma physics. It is also a prototypical equation in turbulence related studies, and can be written in the form}
+
+                   $$\dfrac{\partial }{\partial t} u(x,t) +u \dfrac{\partial u}{\partial x} = \nu \dfrac{\partial^2 u}{\partial x^2}$$
+       
+    			\item \textbf{Reaction-diffusion} \Qtag[green]{NISQ}~ \Ttag[blue]{Num}~\cite{leongVariationalQuantumEvolution2022} \Qtag[green]{NISQ}~ \Ttag[green]{Exp}~\cite{demirdjianVariationalQuantumSolutions2022}, \Qtag{FTol} \Ttag[blue]{Num}~\cite{anEfficientQuantumAlgorithm2022}.
+       
+                \textit{Reaction–diffusion equations describe transport/diffusion of substances and their transformation into other substances, for example to model the concentration of chemical components.}
+                
+                $$ \partial_t p = D \nabla^2 q + R(q)$$
+                \textit{where $D$ is the diffusion coefficient and $R$ is the local reaction rate.}       
     
-                \item Convection \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}.
-       
-    			\item Evolution equation \Qtag[green]{NISQ}~ \Ttag[red]{Theo}~\cite{leongVariationalQuantumEvolution2022a}.\\
-                \textit{Partial Differential Equations with time-domain.}
-       
-    			\item Reaction-diffusion \Qtag[green]{NISQ}~ \Ttag[blue]{Num}~\cite{leongVariationalQuantumEvolution2022a,demirdjianVariationalQuantumSolutions2022}, \Qtag{FTol} \Ttag[blue]{Num}~\cite{anEfficientQuantumAlgorithm2022}.
-    
-                \item Navier-Stokes \Qtag{FTol} \Ttag[blue]{Num}~\cite{gaitanFindingFlowsNavier2020}.
-                \begin{itemize}
-                    \item Incompressible \Qtag[green]{NISQ}~\cite{leongVariationalQuantumEvolution2022a}, \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{lapworthHybridQuantumClassicalCFD2022}.
+                \item \textbf{Navier-Stokes} \Qtag{FTol} \Ttag[blue]{Num}~\cite{gaitanFindingFlowsNavier2020}.
+                
+                \textit{The Navier-Stokes equations describe the motion of viscous fluids. They describe conservation of mass and momentum and often require equations of state for pressure, temperature and density to close the system of equations.}
+
+                $$ \partial_t \rho (x,t) + \nabla \cdot (\rho u) = 0, \frac{\partial}{\partial t}(\rho \mathbf{u})+\nabla \cdot(\rho \mathbf{u} \otimes \mathbf{u})=-\nabla p+\mu \nabla^2 \mathbf{u}+\frac{1}{3} \mu \nabla(\nabla \cdot \mathbf{u})+\rho \mathbf{g}
+                $$
+                
+                \begin{itemize} 
+                    \item \textbf{Incompressible} \Qtag[green]{NISQ}~\cite{leongVariationalQuantumEvolution2022}, \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{lapworthHybridQuantumClassicalCFD2022}.
+
+                    \textit{The incompressible Navier-Stokes equations can be applied for low enough Mach numbers, and cannot be used to accurately simulate density or pressure waves like sound or shock waves. The fluid density is considered constant $\rho = \rho_0$.}
                 \end{itemize}
     
-                \item Hamilton-Jacobi \Qtag{FTol} \Ttag{Theo}~\cite{jinTimeComplexityAnalysis2022,jinQuantumAlgorithmsComputing2022}.
+                \item \textbf{Hamilton-Jacobi} \Qtag{FTol} \Ttag{Theo}~\cite{jinTimeComplexityAnalysis2022,jinQuantumAlgorithmsComputing2022}.
+                
+                \textit{A particular case of the Hamilton-Jacobi-Bellman. The Hamilton-Jacobi is an alternative formulation of classical mechanics, where given a Hamiltonian $H( q , p , t )$ of a mechanical system, the Hamilton–Jacobi equation is a first-order, non-linear PDE for the Hamilton's principal function $S$. One of its advantages is in efficiently identifying conserved quantities of mechanical systems.}
+
+
+                \item \textbf{Black-Scholes-Barenblatt} \Qtag[gray]{QIns} \Ttag[blue]{Num}\cite{patelQuantumInspiredTensorNeural2022}.
+                
+                \textit{The Black-Scholes-Barenblatt equation is a nonlinear extension to the Black-Scholes equation, which models uncertain volatility and interest rates derived from the Black-Scholes equation.}
+
+                \item \textbf{Stefan problems} \Qtag{FTol} \Ttag{Theo}~\cite{sarsengeldinHybridClassicalQuantumFramework2022}.
+                
+                \textit{Stefan problems are a particular kind of boundary value problems for a system of PDEs in which the boundary between the phases can move with time.}
+                
             \end{itemize}
 		\end{itemize}
 
-    \item Linear embedding of nonlinear dynamical systems \Qtag[red]{FTol} \Ttag[red]{Theo} \cite{Engel2021_doi:10.1063/5.0040313,jinTimeComplexityAnalysis2022}.
+    \item \textbf{Stochastic processes} \Qtag[green]{NISQ} \Ttag[blue]{Num}~\cite{kuboVariationalQuantumSimulations2020, alghassiVariationalQuantumAlgorithm2022}, \Qtag{FTol} \Ttag[blue]{Num}~\cite{anQuantumacceleratedMultilevelMonte2021}.
 
-    \item Finite element method \Qtag{FTol} \Ttag{Theo}~\cite{montanaroQuantumAlgorithmsFinite2016}.
-  
-	\item Quantum simulation \Qtag{FTol} \Ttag{Theo}~\cite{berryHamiltonianSimulationNearly2015}.
-		\begin{itemize}
-            \item Sparse Hamiltonians \Qtag{FTol} \Ttag{Theo}~\cite{berryEfficientQuantumAlgorithms2007,berryExponentialImprovementPrecision2014}.
-			\item Imaginary time evolution \Qtag[green]{NISQ}~\cite{mcardle_variational_2019}.
-		\end{itemize}
+    \emph{(Integro-)differential equations in which one or more of the terms is a stochastic process, leading to a solution which is stochastic in nature. Stochastic Differential Equations (SDEs) can be used to model physical systems subject to thermal fluctuations.\\
+    Through the Feynman-Kac formula, many common SDEs can be reduced to solving a PDE for the probability density of interest, as is the case for the Fokker-Planck equation.\\
+    For ease of search, PDEs arising from stochastic processes are indicated both here and in the previous section.}
 
-    \item Lattice Boltzmann algorithms \Qtag[red]{Ftol}~\Ttag[blue]{Num}~\cite{budinski_quantum_2021}
+   \begin{itemize} 
+        \item \textbf{Fokker-Planck} \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}, \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{garcia-ripollQuantuminspiredAlgorithmsMultivariate2021}.
+        
+        \textit{The Fokker-Planck equation for the probability density $p(x,t)$ can be written as}
+        $$ \dfrac{\partial }{\partial t} p(x,t)  = - \dfrac{\partial }{\partial x} \left( \mu(x,t)~p(x,t)  \right) + \dfrac{\partial^2 }{\partial x^2} \left( D(x,t)~p(x,t)  \right)$$
+        \textit{where $\mu$ and $D$ are the drift and diffusion coefficients (which may be time-dependent).}
+
+        \item \textbf{Linear Boltzmann/Rate equation} \Qtag[red]{FTol} \Ttag[blue]{Num}~\cite{jinQuantumSimulationPartial2022a}.
+
+        \textit{The linear Boltzmann or Rate equation  is a stochastic integro-differential equation  for the probability density $p(x,t)$ can be written as}
+        $$ \dfrac{d }{d t} p(x,t)  = \int p(x',t) W(x,x') dx' - p(x,t) \int W(x',x) dx' $$
+        \textit{where $W(x,x')$ is the probability rate of transition from state $x'$ to state $x$. 
+        where $dp/dt$ can include partial derivatives of $p(x,t)$. }
+        
+   \end{itemize}
+
+    \item \textbf{Other techniques}
+    \begin{itemize} 
+                
+        \item \textbf{Linear embedding of nonlinear dynamical systems} \Qtag[red]{FTol} \Ttag[red]{Theo} \cite{engelLinearEmbeddingNonlinear2021,jinTimeComplexityAnalysis2022} \Ttag[blue]{Num} \cite{liuEfficientQuantumAlgorithm2021}.
+
+        \textit{Several linear embedding of nonlinear dynamical systems have been developed to extend the class of problems that can be tackled by quantum computers. These include Koopman–von Neumann formulation, Quantum nonlinear Schrödinger linearization formulation and Carleman linearization, amongst others.}
+        
+        \item \textbf{Koopman–von Neumann formulation} \Qtag[red]{FTol} \Ttag[red]{Theo} \cite{josephKoopmanNeumannApproach2020,jinTimeComplexityAnalysis2022}, \Ttag[blue]{Num}~\cite{linKoopmanNeumannMechanics2022}.
+
+        \textit{Koopman–von Neumann mechanics is a description of classical mechanics embedded in a Hilbert space. The dynamical equation can be written as $\mathrm{i} \partial_t \psi=\mathcal{H}_{\mathrm{KvN}}~ \psi $, where the operator $\mathcal{H}_{\mathrm{KvN}}=-\mathrm{i} \sum_j\left(F_j \frac{\partial}{\partial x_j}+\frac{1}{2} \frac{\partial F_j}{\partial x_j}\right)$. Furthermore, the probability density is interpreted as  $\rho = |\psi|^2$. Applications may include the Vlasov-Maxwell coupled system of equations.}
+            
+        \item \textbf{Quantum nonlinear Schrödinger linearization formulation} \Qtag[red]{FTol} \Ttag[red]{Theo} \cite{lloydQuantumAlgorithmNonlinear2020}.
+
+        \textit{Formulation of ODEs/PDEs of the type $ dx/dt +f(x) x = b(t) $, with $f = x^{\dagger \otimes m} F x^{\otimes m}$, as nonlinear Schrödinger equations. Potential applications of the method may include the Navier-Stokes equation, plasma hydrodynamics, epidemiology.}
     
-    \item Quantum lattice algorithms \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{andersonCommentsUnitaryQubit2022,koukoutsisDysonMapsUnitary2022,oganesovEffectFourierTransform2018,ramReflectionTransmissionElectromagnetic2021,vahalaBuildingThreedimensionalQuantum2020,vahalaEffectPauliSpin2020,vahalaOneTwodimensionalQuantum2021,vahalaOneTwodimensionalQuantum2021a,vahalaQuantumLatticeRepresentation2022a,vahalaQubitUnitaryLattice2020,vahalaQubitUnitaryLattice2020a,vahalaTwoDimensionalElectromagnetic2021,vahalaUnitaryQuantumLattice2020,vahalaUnitaryQubitLattice2019,vahala_vahala_soe_ram_2020,yepezEfficientAccurateQuantum2002,yepezRelativisticPathIntegral2005,yepezQuantumLatticeGas2016,vahalaQuantumLatticeGas2003,vahalaUnitaryQubitLattice2011,vahalaUnitaryQuantumLattice2010,oganesovBenchmarkingDiracgeneratedUnitary2016,oganesovImaginaryTimeIntegration2016,oganesovUnitaryQuantumLattice2015,Shi2018_PhysRevE.97.053206,andersonCommentsUnitaryQubit2023} \red{The citations are not ordered alphabetically, for some reason.}
+        \item \textbf{Madelung transform for nonlinear relativistic fluids} \Ttag[blue]{Num}~\cite{hatifiQuantumWalkHydrodynamics2019}, \Qtag[green]{NISQ} \Ttag[green]{Exp}~\cite{zylbermanHybridQuantumClassicalAlgorithm2022}.
+
+        \textit{The Madelung equations are an alternative formulation to the Schrödinger equation, written in terms of hydrodynamical variables, with the addition of the Bohm quantum potential $Q$}
+        
+        $$\partial_t \rho_m+\nabla \cdot\left(\rho_m \mathbf{u}\right)=0, ~\frac{d \mathbf{u}}{d t}=\partial_t \mathbf{u}+\mathbf{u} \cdot \nabla \mathbf{u}=-\frac{1}{m} \nabla(Q+V)$$
+
+        \textit{Applications include modeling of shocks in plasmas.}
     
-    %  Quantum lattice algorithms
-    \textit{Highly parallelizable approach amenable to classical supercomputers, allowing the study of (Klein-Gordon-)Maxwell's equations, the Gross-Pitaevski equation, the nonlinear Schrödinger equation, and the KdV equation. In some cases, the method may also be suitable for fault-tolerant quantum computers.}
+        \item \textbf{Finite element method} \Qtag{FTol} \Ttag{Theo}~\cite{montanaroQuantumAlgorithmsFinite2016}.
+        
+        \textit{This approach relies on dividing a system/domain into smaller regions called finite elements. The discretization process applied to a boundary value problem leads to a system of algebraic equations, which can be less computationally expensive to resolve than the original PDE. Important applications include fluid flow, heat transfer, and electromagnetic potentials.}
+    
+        \item \textbf{Lattice Boltzmann algorithms} \Qtag[red]{Ftol}~\Ttag[blue]{Num}~\cite{ljubomirQuantumAlgorithmNavier2022}.
+
+        \textit{Originally developed as a classical algorithm, this approach can be used to simulate fluid dynamics without having to solve the Navier–Stokes equations directly. The fluid density is represented on a lattice and evolves in time with streaming and collision processes. One of the advantages of the method is its efficiency/scalability in parallel architectures.}
+        
+        \item \textbf{Quantum lattice algorithms} \Qtag[gray]{QIns} \Ttag[blue]{Num}~\cite{andersonCommentsUnitaryQubit2022,koukoutsisDysonMapsUnitary2022,oganesovEffectFourierTransform2018,ramReflectionTransmissionElectromagnetic2021,vahalaBuildingThreedimensionalQuantum2020,vahalaEffectPauliSpin2020,vahalaOneTwodimensionalQuantum2021,vahalaOneTwodimensionalQuantum2021a,vahalaQuantumLatticeRepresentation2022a,vahalaQubitUnitaryLattice2020,vahalaQubitUnitaryLattice2020a,vahalaTwoDimensionalElectromagnetic2021,vahalaUnitaryQuantumLattice2020,vahalaUnitaryQubitLattice2019,yepezEfficientAccurateQuantum2002,yepezRelativisticPathIntegral2005,yepezQuantumLatticeGas2016,vahalaQuantumLatticeGas2003,vahalaUnitaryQubitLattice2011,vahalaUnitaryQuantumLattice2010,oganesovBenchmarkingDiracgeneratedUnitary2016,oganesovImaginaryTimeIntegration2016,oganesovUnitaryQuantumLattice2015,shiSimulationsRelativisticQuantum2018}.
+        \\\textit{Highly parallelizable approach amenable to classical supercomputers, allowing the study of (Klein-Gordon-)Maxwell's equations, the Gross-Pitaevski equation, the nonlinear Schrödinger equation, and the KdV equation. In some cases, the method may also be suitable for fault-tolerant quantum computers.}
+    \end{itemize}
 
 \end{itemize}
-
+%\nocite{*}
+\newpage
 \printbibliography
 
 \end{document}
