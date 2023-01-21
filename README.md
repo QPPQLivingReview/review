@@ -1,4 +1,4 @@
-#  **QPPQ**: *a living review of Quantum Computing + Plasma Physics*
+# *A Living Review of Quantum Computing for Plasma Physics*
 
 <!DOCTYPE html>
 <script>window.texme = { style: 'none' }</script>
