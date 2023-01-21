@@ -188,7 +188,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 		* **Nonlinear-Schrödinger** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Lub+20](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.101.010301)
 			
-			*Similar to the Schrödinger-Poisson system, however the potential is created by the square absolute value of the wave-function* $V= \psi \psi^*$ *which induces a cubic nonlinearity in the equations.*
+			*Similar to the Schrödinger-Poisson system, however the potential is created by the square absolute value of the wave-function* $V= \vert \psi \vert^2$ *which induces a cubic nonlinearity in the equations.*
 			
 		* **Burger’s** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Oz+21](https://link.springer.com/article/10.1007/s11128-021-03391-8)
 			
@@ -261,9 +261,9 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 		*where the operator*
 		
-		$$H_\mathrm{KvN} = - i \sum_j \left(F_j \frac{\partial}{\partial x_j} + \frac{1}{2}  \frac{\partial F_j}{\partial x_j} \right)$$.
+		$$H_\mathrm{KvN} = - i \sum_j \left(F_j \frac{\partial}{\partial x_j} + \frac{1}{2}  \frac{\partial F_j}{\partial x_j} \right)$$
 		
-		*Furthermore, the probability density is interpreted as* $\rho = \psi \psi^*$  *. Applications may include the Vlasov-Maxwell coupled system of equations.*
+		*Furthermore, the probability density is interpreted as* $\rho = \vert \psi \vert^2$  *. Applications may include the Vlasov-Maxwell coupled system of equations.*
 	
 	* **Quantum nonlinear Schrödinger linearization formulation** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Llo+20](https://arxiv.org/abs/2011.06571)
 	
