@@ -28,7 +28,7 @@ Color-filled tags indicate the type of content. Since most papers contain some f
 
 * [![download](https://img.shields.io/badge/-Exp-darkgreen)]() marks papers with displayed __experimental__ results. We may ommit this tag if the paper is referenced and tagged in a subsequent subsection.
 
-The fact that a paper is listed in this document does not endorse or validate its content - that is for the community (and for peer-review) to decide.  Furthermore, the classification here is a best attempt and may have flaws - please let us know if (a) we have missed a paper you think should be included, (b) a paper has been misclassified or wrongly tagged, or (c) a citation for a paper is not correct or if the journal information is now available.
+The inclusion of a paper in the review does not indicate endorsement or validation of its content, as this is to be determined by the community and through peer review. The classification system may have limitations and we welcome feedback from the community on any papers that should be included, papers that have been misclassified or errors in citations or journal information.
 
 In order to be as useful as possible, this document will continue to evolve so please check back. See [http://epp.ist.utl.pt/qppq/](http://epp.ist.utl.pt/qppq/) before you write your next paper. You can simply download the **.bib** file to get all of the latest references. Please consider citing Ref. **\cite{qppqlivingreview}** when referring to this living review.
 
