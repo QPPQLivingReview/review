@@ -106,7 +106,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 			*Many problems can be mapped to the Schrödinger equation*
 			
-			$$\mathrm{i}\hbar \dv{t} \ket{\psi(t)} = H\ket{\psi(t)}$$
+			$$\mathrm{i}\hbar \partial_t \ket{\psi(t)} = H\ket{\psi(t)}$$
 			
 			*described by some Hamiltonian H. Solving the Schrödinger equation can often be done much more efficiently with quantum computers.*
 				
