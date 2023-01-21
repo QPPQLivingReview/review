@@ -74,7 +74,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 	
 		*There is no general reliable procedure to solve nonlinear ODEs, but some methods have been proposed.*
 	
-* **Partial differential equations (PDEs)** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [GRG22]([![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]()) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [CLO21](https://doi.org/10.22331/q-2021-11-10-574) [Kro22](https://arxiv.org/abs/2202.01054) [![download](https://img.shields.io/badge/-QIns-grey)]() [Gar21](https://quantum-journal.org/papers/q-2021-04-15-431/)
+* **Partial differential equations (PDEs)** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [GRG22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.105.012433) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [CLO21](https://doi.org/10.22331/q-2021-11-10-574) [Kro22](https://arxiv.org/abs/2202.01054) [![download](https://img.shields.io/badge/-QIns-grey)]() [Gar21](https://quantum-journal.org/papers/q-2021-04-15-431/)
 
 	*In general, plasma systems are described by partial differential equations. Although some of the equations presented here do not commonly describe plasma systems, the techniques employed to solve them are often general enough that they could be adapted to tackle plasma PDEs.*
 	
