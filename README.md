@@ -41,7 +41,7 @@ In order to be as useful as possible, this document will continue to evolve so p
   
 *  **System of nonlinear equations** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [DS21](https://arxiv.org/abs/2105.07317) [![download](https://img.shields.io/badge/-Num-darkblue)]() [XWG21](https://www.worldscientific.com/doi/10.1142/S201032472140004X) [Xue+22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.106.032427)
 
-	*Nonlinear equations depend nonlinearly on $x$, and they are generally much harder to solve. As quantum mechanics is inherently linear, many techniques rely on mapping the original nonlinear problem to a (usually approximate) linear one, that is easier to solve.*
+	*Nonlinear equations depend nonlinearly on* $x$*, and they are generally much harder to solve. As quantum mechanics is inherently linear, many techniques rely on mapping the original nonlinear problem to a (usually approximate) linear one, that is easier to solve.*
 
 	* **System of polynomial equations** [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Cha+19](https://www.nature.com/articles/s41598-019-46729-0)
 	
@@ -193,7 +193,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 			*Reaction–diffusion equations describe transport/diffusion of substances and their transformation into other substances, for example to model the concentration of chemical components.*	
 			
-			*where $D$ is the diffusion coefficient and R is the local reaction rate.*		
+			*where* $D$ *is the diffusion coefficient and R is the local reaction rate.*		
 		* **Navier-Stokes** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Gai20](https://www.nature.com/articles/s41534-020-00291-0)
 		
 			*The Navier-Stokes equations describe the motion of viscous fluids. They describe conservation of mass and momentum and often require equations of state for pressure, temperature and density to close the system of equations.*
@@ -226,7 +226,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 	
 	* **Fokker-Planck** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Gar21](https://arxiv.org/abs/1909.06619)
 	
-		*The Fokker-Planck equation for the probability density $p(x, t)$ can be written as*
+		*The Fokker-Planck equation for the probability density* $p(x, t)$ *can be written as*
 		
 		$$\dfrac{\partial }{\partial t} p(x,t)  = - \dfrac{\partial }{\partial x} \left( \mu(x,t)~p(x,t)  \right) + \dfrac{\partial^2 }{\partial x^2} \left( D(x,t)~p(x,t)  \right)$$
 		
@@ -238,7 +238,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 		$$\dfrac{d }{d t} p(x,t)  = \int p(x',t) W(x,x') dx' - p(x,t) \int W(x',x) dx' $$
 		
-		*where* $W(x,x')$ *is the probability rate of transition from state $x'$ to state* $x$, *where* $dp/dt$ *can include partial derivatives of* $p(x, t)$.
+		*where* $W(x,x')$ *is the probability rate of transition from state* $x'$ *to state* $x$, *where* $dp/dt$ *can include partial derivatives of* $p(x, t)$.
 
 * **Other techniques:**
 
