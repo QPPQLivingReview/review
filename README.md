@@ -8,6 +8,8 @@ The purpose of this note is to collect references for quantum algorithms already
 
 To facilitate search, if clearly appropriate, the following tags are applied 
 
+![download](https://img.shields.io/badge/-NISQ-limegreen.svg)
+
 * [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() __noisy-intermediate scale quantum computing__
 
 * [![download](https://img.shields.io/badge/-FTol-red)]() __fault-tolerant quantum computing__
