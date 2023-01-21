@@ -1,3 +1,5 @@
+<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script><textarea>
+
 #  **QPPQ**: *a living review of Quantum Computing + Plasma Physics*
 
 *Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses. As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.*
@@ -7,8 +9,6 @@
 The purpose of this note is to collect references for quantum algorithms already relevant to plasma physics.  A minimal number of categories is chosen in order to be as useful as possible. Note that papers may be referenced in more than one category.
 
 To facilitate search, if clearly appropriate, the following tags are applied 
-
-![download](https://img.shields.io/badge/-NISQ-limegreen.svg)
 
 * [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() __noisy-intermediate scale quantum computing__
 
@@ -39,7 +39,7 @@ In order to be as useful as possible, this document will continue to evolve so p
  
 *  **System of linear equations**  [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [HBR21](https://arxiv.org/abs/1909.07344) [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Bra+20](https://arxiv.org/abs/1909.05820)  [Xu+21](https://www.sciencedirect.com/science/article/pii/S2095927321004631) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [HHL09](https://doi.org/10.1103/PhysRevLett.103.150502) [CJS13](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.110.250504) [CKS17](https://epubs.siam.org/doi/10.1137/16M1087072) [WX22](https://arxiv.org/abs/2208.06763) [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [SSO19] [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [BL22](https://arxiv.org/abs/2206.10576) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [SM21](https://arxiv.org/abs/2103.10309)
 
-	*Many problems in plasma physics may be formulated, either exactly or approximately, as a problem of the form Ax = b, where A and b encode the information about the system (including its initial conditions, if applicable), and the goal is to compute x, which encodes the desired data.*
+	*Many problems in plasma physics may be formulated, either exactly or approximately, as a problem of the form* $Ax = b$ *where* $A$ *and* $b$ *encode the information about the system (including its initial conditions, if applicable), and the goal is to compute* $x$ *, which encodes the desired data.*
   
 *  **System of nonlinear equations** [![download](https://img.shields.io/badge/-FTol-red)]() _ [![download](https://img.shields.io/badge/-Theo-darkred)]() [DS21](https://arxiv.org/abs/2105.07317) [![download](https://img.shields.io/badge/-Num-darkblue)]() [XWG21](https://www.worldscientific.com/doi/10.1142/S201032472140004X) [Xue+22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.106.032427)
 
@@ -68,7 +68,9 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 			* **Laguerre**  [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [CS22](https://arxiv.org/abs/2204.03657)
 		
-				*The Laguerre equation is of the form* $$x \dfrac{\mathrm{d}^2 y}{\mathrm{d} x^2} + (1-x) \dfrac{\mathrm{d} y}{\mathrm{d} x} + n ~y = 0$$
+				*The Laguerre equation is of the form*
+				
+				$$x \dfrac{\mathrm{d}^2 y}{\mathrm{d} x^2} + (1-x) \dfrac{\mathrm{d} y}{\mathrm{d} x} + n ~y = 0$$
 			
 	* **Nonlinear** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [KPE21](https://link.aps.org/doi/10.1103/PhysRevA.103.052416) [Shi+21](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.103.062608) [![download](https://img.shields.io/badge/-FTol-red)]() [LO08](https://arxiv.org/abs/0812.4423) [DS21](https://arxiv.org/abs/2105.07317)  [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703) [Liu+20](https://arxiv.org/abs/2011.03185) [SGS22](https://arxiv.org/abs/2212.10775) [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Zan+21](https://www.sciencedirect.com/science/article/pii/S2095927321004631)
 	
@@ -118,7 +120,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 			*The prototypical parabolic linear PDE. This equation describes the diffusion of heat in a material*
 			
-			$$\partial_t u(t,x) = \alpha \Delta u $$
+			$$\partial_t u(t,x) = \alpha ~\Delta u $$
 			
 			*where α is the thermal diffusivity. Its applications are of fundamental importance in most branches of physics and engineering.*
 
@@ -145,7 +147,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 			*The prototypical hyperbolic equation in physics, it describes oscillatory and propagating perturbations in a medium*
 			
-			$$\partial_{tt} u(t,x) = c^2 \nabla^2 u$$
+			$$\partial_{tt} u(t,x) = c^2 ~\nabla^2 u$$
 			
 		* **Maxwell’s** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [CJO19](https://doi.org/10.1103/PhysRevA.99.012323) [![download](https://img.shields.io/badge/-Num-darkblue)]() [NSD21](https://arxiv.org/abs/2112.06086) [NDS22](https://arxiv.org/abs/2212.09113)
 		
@@ -163,7 +165,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 			*The Helmholtz equation is the eigenvalue problem for the Laplace operator.*
 			
-			$$\nabla^2 f = - k^2 f$$
+			$$\nabla^2 f = - k^2~ f$$
 			
 			*Important applications include wave-like phenomena and diffusion processes.*
 
@@ -184,7 +186,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 		* **Nonlinear-Schrödinger** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Lub+20](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.101.010301)
 			
-			*Similar to the Schrödinger-Poisson system, however the potential is created by the square absolute value of the wave-function* $V = |\psi|^2$, *which induces a cubic nonlinearity in the equations.*
+			*Similar to the Schrödinger-Poisson system, however the potential is created by the square absolute value of the wave-function* $V = |\psi|^2$ *which induces a cubic nonlinearity in the equations.*
 			
 		* **Burger’s** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Oz+21](https://link.springer.com/article/10.1007/s11128-021-03391-8)
 			
@@ -250,13 +252,19 @@ In order to be as useful as possible, this document will continue to evolve so p
 	
 	* **Koopman–von Neumann formulation** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Jos20](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.2.043102) [JLY22c](https://arxiv.org/abs/2209.08478) [![download](https://img.shields.io/badge/-Num-darkblue)]() [Lin+22](https://arxiv.org/abs/2202.02188)
 	
-		*Koopman–von Neumann mechanics is a description of classical mechanics embedded in a Hilbert space. The dynamical equation can be written as* $$i \partial_t \psi= H_\mathrm{KvN} \psi$$ *where the operator* $$H_\mathrm{KvN} = - i \sum_j \left(F_j \frac{\partial}{\partial x_j} + \frac{1}{2}  \frac{\partial F_j}{\partial x_j} \right)$$.
+		*Koopman–von Neumann mechanics is a description of classical mechanics embedded in a Hilbert space. The dynamical equation can be written as*
 		
-		*Furthermore, the probability density is interpreted as* $\rho = |\psi|^2$. *Applications may include the Vlasov-Maxwell coupled system of equations.*
+		$$i \partial_t \psi = H_\mathrm{KvN} \psi$$
+		
+		*where the operator*
+		
+		$$H_\mathrm{KvN} = - i \sum_j \left(F_j \frac{\partial}{\partial x_j} + \frac{1}{2}  \frac{\partial F_j}{\partial x_j} \right)$$.
+		
+		*Furthermore, the probability density is interpreted as* $\rho = |\psi|^2$  *. Applications may include the Vlasov-Maxwell coupled system of equations.*
 	
 	* **Quantum nonlinear Schrödinger linearization formulation** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Llo+20](https://arxiv.org/abs/2011.06571)
 	
-		*Formulation of ODEs/PDEs of the type* $dx/dt + f(x) x = b(t)$, *with* $f = x^{\dagger \otimes m} F x^{\otimes m}$*, as nonlinear Schrödinger equations. Potential applications of the method may in- clude the Navier-Stokes equation, plasma hydrodynamics, epidemiology.*
+		*Formulation of ODEs/PDEs of the type* $dx/dt + f(x) x = b(t)$ *with* $f = x^{\dagger \otimes m} F x^{\otimes m}$ *, as nonlinear Schrödinger equations. Potential applications of the method may in- clude the Navier-Stokes equation, plasma hydrodynamics, epidemiology.*
 		
 	* **Madelung transform for nonlinear relativistic fluids** [![download](https://img.shields.io/badge/-Num-darkblue)]() [Hat+19](https://www.nature.com/articles/s41598-019-40059-x) [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Zyl+22](https://arxiv.org/abs/2202.00918)
 	
@@ -274,6 +282,6 @@ In order to be as useful as possible, this document will continue to evolve so p
 	
 		*Originally developed as a classical algorithm, this approach can be used to simulate fluid dynamics without having to solve the Navier–Stokes equations directly. The fluid density is represented on a lattice and evolves in time with streaming and collision processes. One of the advantages of the method is its efficiency/scalability in parallel architectures.*
 	
-	* **Quantum lattice algorithms** [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [And+22](https://arxiv.org/abs/2211.16661) [Kou+22](https://arxiv.org/abs/2209.08523) [Oga+18](https://arxiv.org/abs/2209.08523); [Ram+21](https://aip.scitation.org/doi/10.1063/5.0067204) [Vah+20a](https://doi.org/10.1080/10420150.2020.1845685) [Vah+20b](https://arxiv.org/abs/2010.12264) [Vah+21a](https://arxiv.org/abs/2010.12264) [Vah+21b](https://www.tandfonline.com/doi/full/10.1080/10420150.2021.1891059) [Vah+22](https://www.tandfonline.com/doi/full/10.1080/10420150.2022.2049784) [VSV20](https://www.tandfonline.com/doi/full/10.1080/10420150.2020.1718136) [VVS20](https://www.tandfonline.com/doi/full/10.1080/10420150.2020.1718135) [Vah+21c](https://doi.org/10.2139/ssrn.3996913) [Vah+20c](https://doi.org/10.1017/S0022377820001166) [Vah+19](https://doi.org/10.1016/j.cnsns.2019.03.016) [Vah+20d](https://doi.org/10.1017/S0022377820001166) [Yep02](https://arxiv.org/abs/quant-ph/0210093) [Yep05](https://link.springer.com/article/10.1007/s11128-005-0009-7) [Yep16](https://doi.org/10.1117/12.2246702) [VYV03](https://linkinghub.elsevier.com/retrieve/pii/S0375960103003347) [Vah+11](https://doi.org/10.1145/2063384.2063416) [Vah+10](https://doi.org/10.1109/HPCMP-UGC.2010.15) [Oga+16a](https://doi.org/10.1080/10420150.2015.1137916) [Oga+16b](https://doi.org/10.1080/10420150.2015.1137916) [Oga+15](https://www.tandfonline.com/doi/full/10.1080/10420150.2014.988625) [Shi+18](https://link.aps.org/doi/10.1103/PhysRevE.97.053206) [And+23](https://arxiv.org/abs/2211.16661)
+	* **Quantum lattice algorithms** [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [And+22](https://arxiv.org/abs/2211.16661) [Kou+22](https://arxiv.org/abs/2209.08523) [Oga+18](https://arxiv.org/abs/2209.08523) [Ram+21](https://aip.scitation.org/doi/10.1063/5.0067204) [Vah+20a](https://doi.org/10.1080/10420150.2020.1845685) [Vah+20b](https://arxiv.org/abs/2010.12264) [Vah+21a](https://arxiv.org/abs/2010.12264) [Vah+21b](https://www.tandfonline.com/doi/full/10.1080/10420150.2021.1891059) [Vah+22](https://www.tandfonline.com/doi/full/10.1080/10420150.2022.2049784) [VSV20](https://www.tandfonline.com/doi/full/10.1080/10420150.2020.1718136) [VVS20](https://www.tandfonline.com/doi/full/10.1080/10420150.2020.1718135) [Vah+21c](https://doi.org/10.2139/ssrn.3996913) [Vah+20c](https://doi.org/10.1017/S0022377820001166) [Vah+19](https://doi.org/10.1016/j.cnsns.2019.03.016) [Vah+20d](https://doi.org/10.1017/S0022377820001166) [Yep02](https://arxiv.org/abs/quant-ph/0210093) [Yep05](https://link.springer.com/article/10.1007/s11128-005-0009-7) [Yep16](https://doi.org/10.1117/12.2246702) [VYV03](https://linkinghub.elsevier.com/retrieve/pii/S0375960103003347) [Vah+11](https://doi.org/10.1145/2063384.2063416) [Vah+10](https://doi.org/10.1109/HPCMP-UGC.2010.15) [Oga+16a](https://doi.org/10.1080/10420150.2015.1137916) [Oga+16b](https://doi.org/10.1080/10420150.2015.1137916) [Oga+15](https://www.tandfonline.com/doi/full/10.1080/10420150.2014.988625) [Shi+18](https://link.aps.org/doi/10.1103/PhysRevE.97.053206) [And+23](https://arxiv.org/abs/2211.16661)
 	
 		*Highly parallelizable approach amenable to classical supercomputers, allowing the study of (Klein-Gordon-)Maxwell’s equations, the Gross-Pitaevski equation, the nonlinear Schrödinger equation, and the KdV equation. In some cases, the method may also be suitable for fault-tolerant quantum computers*
