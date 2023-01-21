@@ -66,7 +66,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 			* **Laguerre**  [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [CS22](https://arxiv.org/abs/2204.03657)
 		
-				*The Laguerre equation is of the form* $$x\dv[2]{y}{x}+(1-x)\dv{y}{x} + ny=0.$$
+				*The Laguerre equation is of the form* $$ x \dfrac{\mathrm{d}^2 y}{\mathrm{d} x^2} + (1-x) \dfrac{\mathrm{d} y}{\mathrm{d} x} + n ~y = 0$$
 			
 	* **Nonlinear** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [KPE21](https://link.aps.org/doi/10.1103/PhysRevA.103.052416) [Shi+21](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.103.062608) [![download](https://img.shields.io/badge/-FTol-red)]() [LO08](https://arxiv.org/abs/0812.4423) [DS21](https://arxiv.org/abs/2105.07317)  [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703) [Liu+20](https://arxiv.org/abs/2011.03185) [SGS22](https://arxiv.org/abs/2212.10775) [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Zan+21](https://www.sciencedirect.com/science/article/pii/S2095927321004631)
 	
