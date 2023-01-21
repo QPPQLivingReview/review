@@ -61,7 +61,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 			* **Quantum harmonic oscillator** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Ric+22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.106.052431)
 			
-				*Here, the time-independent Schrödinger equation has a Hamiltonian with a potential proportional to $x^2$* .
+				*Here, the time-independent Schrödinger equation has a Hamiltonian with a potential proportional to* $x^2$.
 			
 			
 			* **Laguerre**  [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [CS22](https://arxiv.org/abs/2204.03657)
@@ -88,7 +88,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 				
 				$$\dfrac{\partial }{\partial t} f(x,p,t) + \dfrac{d r}{d t} \dfrac{\partial }{\partial r} f + \dfrac{d p}{d t} \dfrac{\partial }{\partial p} f = \mathcal{C}$$
 			
-				*where $\mathcal{C}$ is a collision term. The $dp/dt$ term can be coupled the (Electromagnetic) fields either through to the Poisson or the set of Maxwell’s equations.*
+				*where* $\mathcal{C}$ *is a collision term. The* $dp/dt$ *term can be coupled the (Electromagnetic) fields either through to the Poisson or the set of Maxwell’s equations.*
 				
 			* **Poisson**  [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [Bra+20](https://arxiv.org/abs/1909.05820) [Sat+21](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.104.052409) [AK22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.104.052409) [Sah+22](https://arxiv.org/abs/2210.16668) [Lub+20](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.101.010301) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Cao+13](https://doi.org/10.1088/1367-2630/15/1/013021) [![download](https://img.shields.io/badge/-Num-darkblue)]() [Arr+19](https://doi.org/10.1103/PhysRevA.100.032306) [Ric+22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.106.052431) [Liu+21](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.104.022418) [Wan+20](https://link.springer.com/article/10.1007/s11128-020-02669-7)
 			
@@ -121,17 +121,18 @@ In order to be as useful as possible, this document will continue to evolve so p
 			*where α is the thermal diffusivity. Its applications are of fundamental importance in most branches of physics and engineering.*
 
 		* **Black-Scholes** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [FJO21](https://epubs.siam.org/doi/10.1137/21M1397878) [MK22](https://ieeexplore.ieee.org/document/9618807/) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703)
-			*The Black–Scholes equation is a PDE which describes the price of the option V (S, t) over time t and price of underlying asset S(t),r is the ”force of interest, μ is the annualized drift rate of S, and σ is the standard deviation of the stock’s returns.*
+		
+			*The Black–Scholes equation is a PDE which describes the price of the option V (S, t) over time t and price of underlying asset S(t), r is the ”force of interest, μ is the annualized drift rate of S, and σ is the standard deviation of the stock’s returns.*
 			
 			$$\frac{\partial V}{\partial t}+\frac{1}{2} \sigma^2 S^2 \frac{\partial^2 V}{\partial S^2}+r S \frac{\partial V}{\partial S}-r V=0$$
 			
-		* **Fokker-Planck** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703), [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Gar21](https://arxiv.org/abs/1909.06619)
+		* **Fokker-Planck** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Gar21](https://arxiv.org/abs/1909.06619)
 	
-		*The Fokker-Planck equation for the probability density $p(x, t)$ can be written as*
+		*The Fokker-Planck equation for the probability density* $p(x, t)$ *can be written as*
 		
 		$$\dfrac{\partial }{\partial t} p(x,t)  = - \dfrac{\partial }{\partial x} \left( \mu(x,t)~p(x,t)  \right) + \dfrac{\partial^2 }{\partial x^2} \left( D(x,t)~p(x,t) \right)$$
 		
-		*where $\mu$ and $D$ are the drift and diffusion coefficients (which may be time-dependent).*
+		*where* $\mu$ *and* $D$ *are the drift and diffusion coefficients (which may be time-dependent).*
 		
 		* **Hamilton-Jacobi-Bellman** [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Pat+22](https://arxiv.org/abs/2208.02235)
 
@@ -177,11 +178,11 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 		* **Schrödinger-Poisson** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [MS21](dx.doi.org/10.3847/1538-4357/abe6ac)
 			
-			*Similar to the Vlasov-Poisson system, the Schr ̈odinger-Poisson equation attempts to describe the self-consistent evolution of a wave-function and a potential.*
+			*Similar to the Vlasov-Poisson system, the Schrödinger-Poisson equation attempts to describe the self-consistent evolution of a wave-function and a potential.*
 			
 		* **Nonlinear-Schrödinger** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Lub+20](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.101.010301)
 			
-			*Similar to the Schrödinger-Poisson system, however the potential is created by the square absolute value of the wave-function V = |ψ|2, which induces a cubic nonlinearity in the equations.*
+			*Similar to the Schrödinger-Poisson system, however the potential is created by the square absolute value of the wave-function* $V = |\psi|^2$, *which induces a cubic nonlinearity in the equations.*
 			
 		* **Burger’s** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Oz+21](https://link.springer.com/article/10.1007/s11128-021-03391-8)
 			
@@ -201,21 +202,21 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 			* **Incompressible** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [LEK22](https://arxiv.org/abs/2204.02912) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Lap22](https://arxiv.org/abs/2206.00419)
 			
-				*The incompressible Navier-Stokes equations can be applied for low enough Mach numbers, and cannot be used to accurately simulate density or pres- sure waves like sound or shock waves. The fluid density is considered constant $\rho = \rho_0$.*
+				*The incompressible Navier-Stokes equations can be applied for low enough Mach numbers, and cannot be used to accurately simulate density or pres- sure waves like sound or shock waves. The fluid density is considered constant* $\rho = \rho_0$.
 
 		* **Hamilton-Jacobi** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [JLY22c](https://arxiv.org/abs/2209.08478) [JL22](https://arxiv.org/abs/2202.07834)
 			
-			*A particular case of the Hamilton-Jacobi-Bellman. The Hamilton-Jacobi is an alternative formulation of classical mechanics, where given a Hamiltonian H(q, p, t) of a mechanical system, the Hamilton–Jacobi equation is a first-order, non-linear PDE for the Hamilton’s principal function S. One of its advantages is in efficiently identifying conserved quantities of mechanical systems.*
+			*A particular case of the Hamilton-Jacobi-Bellman. The Hamilton-Jacobi is an alternative formulation of classical mechanics, where given a Hamiltonian* $H(q, p, t)$ *of a mechanical system, the Hamilton–Jacobi equation is a first-order, non-linear PDE for the Hamilton’s principal function S. One of its advantages is in efficiently identifying conserved quantities of mechanical systems.*
 			
 		* **Black-Scholes-Barenblatt** [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Pat+22](https://arxiv.org/abs/2208.02235)
 		
-			*The Black-Scholes-Barenblatt equation is a nonlinear extension to the Black- Scholes equation, which models uncertain volatility and interest rates derived from the Black-Scholes equation.*
+			*The Black-Scholes-Barenblatt equation is a nonlinear extension to the Black-Scholes equation, which models uncertain volatility and interest rates derived from the Black-Scholes equation.*
 			
 		* **Stefan problems** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Sar22](https://arxiv.org/abs/2205.02230).
 		
 			*Stefan problems are a particular kind of boundary value problems for a system of PDEs in which the boundary between the phases can move with time.*
 
-* **Stochastic processes** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Kub+20](https://arxiv.org/abs/2012.04429) [Alg+22](https://quantum-journal.org/papers/q-2022-06-07-730/) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [An+21](https://quantum-journal.org/papers/q-2021-06-24-481/).
+* **Stochastic processes** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Kub+20](https://arxiv.org/abs/2012.04429) [Alg+22](https://quantum-journal.org/papers/q-2022-06-07-730/) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [An+21](https://quantum-journal.org/papers/q-2021-06-24-481/)
 
 	*(Integro-)differential equations in which one or more of the terms is a stochastic process, leading to a solution which is stochastic in nature. Stochastic Differential Equations (SDEs) can be used to model physical systems subject to thermal fluctuations.*
 	
@@ -223,21 +224,21 @@ In order to be as useful as possible, this document will continue to evolve so p
 	
 	*For ease of search, PDEs arising from stochastic processes are indicated both here and in the previous section.*
 	
-	* **Fokker-Planck** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703), [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Gar21](https://arxiv.org/abs/1909.06619)
+	* **Fokker-Planck** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Gar21](https://arxiv.org/abs/1909.06619)
 	
 		*The Fokker-Planck equation for the probability density $p(x, t)$ can be written as*
 		
 		$$\dfrac{\partial }{\partial t} p(x,t)  = - \dfrac{\partial }{\partial x} \left( \mu(x,t)~p(x,t)  \right) + \dfrac{\partial^2 }{\partial x^2} \left( D(x,t)~p(x,t)  \right)$$
 		
-		*where $\mu$ and $D$ are the drift and diffusion coefficients (which may be time-dependent).*
+		*where* $\mu$ *and* $D$ *are the drift and diffusion coefficients (which may be time-dependent).*
 		
 	* **Linear Boltzmann/Rate equation** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703)
 
-		*The linear Boltzmann or Rate equation is a stochastic integro-differential equation for the probability density p(x, t) can be written as*
+		*The linear Boltzmann or Rate equation is a stochastic integro-differential equation for the probability density* $p(x, t)$ *can be written as*
 		
 		$$\dfrac{d }{d t} p(x,t)  = \int p(x',t) W(x,x') dx' - p(x,t) \int W(x',x) dx' $$
 		
-		*where $W(x,x′)$ is the probability rate of transition from state $x′$ to state $x$, where $dp/dt$ can include partial derivatives of $p(x, t)$.*
+		*where* $W(x,x')$ *is the probability rate of transition from state $x'$ to state* $x$, *where* $dp/dt$ *can include partial derivatives of* $p(x, t)$.
 
 * **Other techniques:**
 
@@ -247,16 +248,16 @@ In order to be as useful as possible, this document will continue to evolve so p
 	
 	* **Koopman–von Neumann formulation** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Jos20](https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.2.043102) [JLY22c](https://arxiv.org/abs/2209.08478) [![download](https://img.shields.io/badge/-Num-darkblue)]() [Lin+22](https://arxiv.org/abs/2202.02188)
 	
-		*Koopman–von Neumann mechanics is a description of classical mechanics embedded in a Hilbert space. The dynamical equation can be written as $\mathrm{i} \partial_t \psi=\mathcal{H}_{\mathrm{KvN}}~ \psi $, where the operator $\mathcal{H}_{\mathrm{KvN}}=-\mathrm{i} \sum_j\left(F_j \frac{\partial}{\partial x_j}+\frac{1}{2} \frac{\partial F_j}{\partial x_j}\right)$. Furthermore, the probability j ∂xj 2 ∂xj density is interpreted as ρ = |ψ|2. Applications may include the Vlasov-Maxwell
+		*Koopman–von Neumann mechanics is a description of classical mechanics embedded in a Hilbert space. The dynamical equation can be written as *$\mathrm{i} \partial_t \psi=\mathcal{H}_{\mathrm{KvN}}~ \psi $, *where the operator* $\mathcal{H}_{\mathrm{KvN}}=-\mathrm{i} \sum_j\left(F_j \frac{\partial}{\partial x_j}+\frac{1}{2} \frac{\partial F_j}{\partial x_j}\right)$. *Furthermore, the probability j ∂xj 2 ∂xj density is interpreted as ρ = |ψ|2. Applications may include the Vlasov-Maxwell
 	coupled system of equations.*
 	
 	* **Quantum nonlinear Schrödinger linearization formulation** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Llo+20](https://arxiv.org/abs/2011.06571)
 	
-		*Formulation of ODEs/PDEs of the type dx/dt+f(x)x = b(t), with f = x†⊗mFx⊗m, as nonlinear Schrödinger equations. Potential applications of the method may in- clude the Navier-Stokes equation, plasma hydrodynamics, epidemiology.*
+		*Formulation of ODEs/PDEs of the type* $dx/dt +f(x) x = b(t)$, *with* $f = x^{\dagger \otimes m} F x^{\otimes m}$*, as nonlinear Schrödinger equations. Potential applications of the method may in- clude the Navier-Stokes equation, plasma hydrodynamics, epidemiology.*
 		
 	* **Madelung transform for nonlinear relativistic fluids** [![download](https://img.shields.io/badge/-Num-darkblue)]() [Hat+19](https://www.nature.com/articles/s41598-019-40059-x) [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Zyl+22](https://arxiv.org/abs/2202.00918)
 	
-		*The Madelung equations are an alternative formulation to the Schr ̈odinger equation, written in terms of hydrodynamical variables, with the addition of the Bohm quantum potential Q*
+		*The Madelung equations are an alternative formulation to the Schrödinger equation, written in terms of hydrodynamical variables, with the addition of the Bohm quantum potential Q*
 		
 		$$\partial_t \rho_m+\nabla \cdot\left(\rho_m \mathbf{u}\right)=0, ~\frac{d \mathbf{u}}{d t}=\partial_t \mathbf{u}+\mathbf{u} \cdot \nabla \mathbf{u}=-\frac{1}{m} \nabla(Q+V)$$
 		
