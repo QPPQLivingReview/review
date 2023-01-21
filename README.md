@@ -1,3 +1,5 @@
+<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script><textarea>
+
 #  **QPPQ**: *a living review of Quantum Computing + Plasma Physics*
 
 *Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses. As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.*
@@ -39,7 +41,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 
 	*Many problems in plasma physics may be formulated, either exactly or approximately, as a problem of the form* $Ax = b$ *where* $A$ *and* $b$ *encode the information about the system (including its initial conditions, if applicable), and the goal is to compute* $x$ *, which encodes the desired data.*
   
-*  **System of nonlinear equations** [![download](https://img.shields.io/badge/-FTol-red)]() _ [![download](https://img.shields.io/badge/-Theo-darkred)]() [DS21](https://arxiv.org/abs/2105.07317) [![download](https://img.shields.io/badge/-Num-darkblue)]() [XWG21](https://www.worldscientific.com/doi/10.1142/S201032472140004X) [Xue+22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.106.032427)
+*  **System of nonlinear equations** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [DS21](https://arxiv.org/abs/2105.07317) [![download](https://img.shields.io/badge/-Num-darkblue)]() [XWG21](https://www.worldscientific.com/doi/10.1142/S201032472140004X) [Xue+22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.106.032427)
 
 	*Nonlinear equations depend nonlinearly on* $x$*, and they are generally much harder to solve. As quantum mechanics is inherently linear, many techniques rely on mapping the original nonlinear problem to a (usually approximate) linear one, that is easier to solve.*
 
