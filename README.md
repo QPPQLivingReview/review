@@ -1,6 +1,6 @@
 #  **QPPQ**: *a living review of Quantum Computing + Plasma Physics*
 
-<!DOCTYPE html><script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script><textarea>
+<script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script><textarea>
 
 *Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses. As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.*
 
@@ -286,5 +286,3 @@ In order to be as useful as possible, this document will continue to evolve so p
 	* **Quantum lattice algorithms** [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [And+22](https://arxiv.org/abs/2211.16661) [Kou+22](https://arxiv.org/abs/2209.08523) [Oga+18](https://arxiv.org/abs/2209.08523) [Ram+21](https://aip.scitation.org/doi/10.1063/5.0067204) [Vah+20a](https://doi.org/10.1080/10420150.2020.1845685) [Vah+20b](https://arxiv.org/abs/2010.12264) [Vah+21a](https://arxiv.org/abs/2010.12264) [Vah+21b](https://www.tandfonline.com/doi/full/10.1080/10420150.2021.1891059) [Vah+22](https://www.tandfonline.com/doi/full/10.1080/10420150.2022.2049784) [VSV20](https://www.tandfonline.com/doi/full/10.1080/10420150.2020.1718136) [VVS20](https://www.tandfonline.com/doi/full/10.1080/10420150.2020.1718135) [Vah+21c](https://doi.org/10.2139/ssrn.3996913) [Vah+20c](https://doi.org/10.1017/S0022377820001166) [Vah+19](https://doi.org/10.1016/j.cnsns.2019.03.016) [Vah+20d](https://doi.org/10.1017/S0022377820001166) [Yep02](https://arxiv.org/abs/quant-ph/0210093) [Yep05](https://link.springer.com/article/10.1007/s11128-005-0009-7) [Yep16](https://doi.org/10.1117/12.2246702) [VYV03](https://linkinghub.elsevier.com/retrieve/pii/S0375960103003347) [Vah+11](https://doi.org/10.1145/2063384.2063416) [Vah+10](https://doi.org/10.1109/HPCMP-UGC.2010.15) [Oga+16a](https://doi.org/10.1080/10420150.2015.1137916) [Oga+16b](https://doi.org/10.1080/10420150.2015.1137916) [Oga+15](https://www.tandfonline.com/doi/full/10.1080/10420150.2014.988625) [Shi+18](https://link.aps.org/doi/10.1103/PhysRevE.97.053206) [And+23](https://arxiv.org/abs/2211.16661)
 	
 		*Highly parallelizable approach amenable to classical supercomputers, allowing the study of (Klein-Gordon-)Maxwell’s equations, the Gross-Pitaevski equation, the nonlinear Schrödinger equation, and the KdV equation. In some cases, the method may also be suitable for fault-tolerant quantum computers*
-		
-</textarea>
