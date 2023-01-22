@@ -1,17 +1,5 @@
 # *A Living Review of Quantum Computing for Plasma Physics*
 
-<!DOCTYPE html>
-<script>window.texme = { style: 'none' }</script>
-<script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script>
-<style>
-main {
-  max-width: 60em;
-  padding: 2em;
-  margin: 2em auto;
-}
-</style>
-<textarea>
-
 *Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses. As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.*
 
 [![download](https://img.shields.io/badge/download-review-blue.svg)](https://QPPQLivingReview.github.io/review/review/review.pdf)
