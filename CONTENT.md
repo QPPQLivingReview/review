@@ -1,16 +1,8 @@
-# *A Living Review of Quantum Computing for Plasma Physics*
+---
+layout: default
+---
 
-<!DOCTYPE html>
-<script>window.texme = { style: 'none' }</script>
-<script src="https://cdn.jsdelivr.net/npm/texme@1.2.2"></script>
-<style>
-main {
-  max-width: 60em;
-  padding: 2em;
-  margin: 2em auto;
-}
-</style>
-<textarea>
+# *A Living Review of Quantum Computing for Plasma Physics*
 
 *Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses. As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.*
 
@@ -120,7 +112,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 			*Many problems can be mapped to the Schrödinger equation*
 			
-			$$\mathrm{i}\hbar \partial_t \ket{\psi(t)} = H\ket{\psi(t)}$$
+			$$\mathrm{i}\hbar \partial_t \vert{\psi(t)}\rangle = H\vert{\psi(t)}\rangle$$
 			
 			*described by some Hamiltonian H. Solving the Schrödinger equation can often be done much more efficiently with quantum computers.*
 				
