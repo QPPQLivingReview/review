@@ -41,11 +41,11 @@ In order to be as useful as possible, this document will continue to evolve so p
  
 *  **System of linear equations**  [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [HBR21](https://arxiv.org/abs/1909.07344) [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Bra+20](https://arxiv.org/abs/1909.05820)  [Xu+21](https://www.sciencedirect.com/science/article/pii/S2095927321004631) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [HHL09](https://doi.org/10.1103/PhysRevLett.103.150502) [CJS13](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.110.250504) [CKS17](https://epubs.siam.org/doi/10.1137/16M1087072) [WX22](https://arxiv.org/abs/2208.06763) [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [SSO19](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.060504) [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [BL22](https://arxiv.org/abs/2206.10576) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [SM21](https://arxiv.org/abs/2103.10309)
 
-	*Many problems in plasma physics may be formulated, either exactly or approximately, as a problem of the form* $Ax = b$ *where* $A$ *and* $b$ *encode the information about the system (including its initial conditions, if applicable), and the goal is to compute* $x$ *, which encodes the desired data.*
+	*Many problems in plasma physics may be formulated, either exactly or approximately, as a problem of the form* Ax = b *where* A *and* b *encode the information about the system (including its initial conditions, if applicable), and the goal is to compute* x *, which encodes the desired data.*
   
 *  **System of nonlinear equations** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [DS21](https://arxiv.org/abs/2105.07317) [![download](https://img.shields.io/badge/-Num-darkblue)]() [XWG21](https://www.worldscientific.com/doi/10.1142/S201032472140004X) [Xue+22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.106.032427)
 
-	*Nonlinear equations depend nonlinearly on* $x$*, and they are generally much harder to solve. As quantum mechanics is inherently linear, many techniques rely on mapping the original nonlinear problem to a (usually approximate) linear one, that is easier to solve.*
+	*Nonlinear equations depend nonlinearly on* x*, and they are generally much harder to solve. As quantum mechanics is inherently linear, many techniques rely on mapping the original nonlinear problem to a (usually approximate) linear one, that is easier to solve.*
 
 	* **System of polynomial equations** [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Cha+19](https://www.nature.com/articles/s41598-019-46729-0)
 	
@@ -65,7 +65,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 			* **Quantum harmonic oscillator** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Ric+22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.106.052431)
 			
-				*Here, the time-independent Schrödinger equation has a Hamiltonian with a potential proportional to* $x^2$.
+				*Here, the time-independent Schrödinger equation has a Hamiltonian with a potential proportional to* x^2.
 			
 			
 			* **Laguerre**  [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [CS22](https://arxiv.org/abs/2204.03657)
@@ -200,7 +200,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 			*Reaction–diffusion equations describe transport/diffusion of substances and their transformation into other substances, for example to model the concentration of chemical components.*	
 			
-			*where* $D$ *is the diffusion coefficient and R is the local reaction rate.*		
+			*where* D *is the diffusion coefficient and R is the local reaction rate.*		
 		* **Navier-Stokes** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Gai20](https://www.nature.com/articles/s41534-020-00291-0)
 		
 			*The Navier-Stokes equations describe the motion of viscous fluids. They describe conservation of mass and momentum and often require equations of state for pressure, temperature and density to close the system of equations.*
@@ -213,7 +213,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 
 		* **Hamilton-Jacobi** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [JLY22c](https://arxiv.org/abs/2209.08478) [JL22](https://arxiv.org/abs/2202.07834)
 			
-			*A particular case of the Hamilton-Jacobi-Bellman. The Hamilton-Jacobi is an alternative formulation of classical mechanics, where given a Hamiltonian* $H(q, p, t)$ *of a mechanical system, the Hamilton–Jacobi equation is a first-order, non-linear PDE for the Hamilton’s principal function S. One of its advantages is in efficiently identifying conserved quantities of mechanical systems.*
+			*A particular case of the Hamilton-Jacobi-Bellman. The Hamilton-Jacobi is an alternative formulation of classical mechanics, where given a Hamiltonian* H(q, p, t) *of a mechanical system, the Hamilton–Jacobi equation is a first-order, non-linear PDE for the Hamilton’s principal function S. One of its advantages is in efficiently identifying conserved quantities of mechanical systems.*
 			
 		* **Black-Scholes-Barenblatt** [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Pat+22](https://arxiv.org/abs/2208.02235)
 		
@@ -268,7 +268,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 	
 	* **Quantum nonlinear Schrödinger linearization formulation** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Llo+20](https://arxiv.org/abs/2011.06571)
 	
-		*Formulation of ODEs/PDEs of the type* dx/dt + f(x) x = b(t) *with* $f = x^{\dagger \otimes m} F x^{\otimes m}$ *, as nonlinear Schrödinger equations. Potential applications of the method may include the Navier-Stokes equation, plasma hydrodynamics, epidemiology.*
+		*Formulation of ODEs/PDEs of the type* dx/dt + f(x) x = b(t) *with* f = x^(†⊗m) F x^(⊗m) *, as nonlinear Schrödinger equations. Potential applications of the method may include the Navier-Stokes equation, plasma hydrodynamics, epidemiology.*
 		
 	* **Madelung transform for nonlinear relativistic fluids** [![download](https://img.shields.io/badge/-Num-darkblue)]() [Hat+19](https://www.nature.com/articles/s41598-019-40059-x) [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Zyl+22](https://arxiv.org/abs/2202.00918)
 	
