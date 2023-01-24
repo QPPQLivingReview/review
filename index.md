@@ -34,8 +34,6 @@ The fact that a paper is listed in this document does not endorse or validate it
 	
 In order to be as useful as possible, this document will continue to evolve so please check back before you write your next paper. You can simply download the **.bib** file to get all of the latest references. Please consider citing Ref. [AC23](https://arxiv.org/abs/none) when referring to this living review.
 
-![](https://img.shields.io/badge/-NISQ-limegreen.svg)
-
 *  **Modern reviews**
 
 	*Below are links to (static) general and specialized reviews.*
@@ -43,7 +41,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 	* Applications of Quantum Computing to Plasma Simulations [DS21a](https://arxiv.org/abs/2005.14369)
 	* Quantum Computing for Fusion Energy Science Applications [Jos+22](https://arxiv.org/abs/2212.05054)
  
-*  **System of linear equations**  [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [HBR21](https://arxiv.org/abs/1909.07344) [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Bra+20](https://arxiv.org/abs/1909.05820)  [Xu+21](https://www.sciencedirect.com/science/article/pii/S2095927321004631) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [HHL09](https://doi.org/10.1103/PhysRevLett.103.150502) [CJS13](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.110.250504) [CKS17](https://epubs.siam.org/doi/10.1137/16M1087072) [WX22](https://arxiv.org/abs/2208.06763) [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [SSO19](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.060504) [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [BL22](https://arxiv.org/abs/2206.10576) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [SM21](https://arxiv.org/abs/2103.10309)
+*  **System of linear equations**  ![](https://img.shields.io/badge/-NISQ-limegreen.svg) [![download](https://img.shields.io/badge/-Num-darkblue)]() [HBR21](https://arxiv.org/abs/1909.07344) [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Bra+20](https://arxiv.org/abs/1909.05820)  [Xu+21](https://www.sciencedirect.com/science/article/pii/S2095927321004631) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [HHL09](https://doi.org/10.1103/PhysRevLett.103.150502) [CJS13](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.110.250504) [CKS17](https://epubs.siam.org/doi/10.1137/16M1087072) [WX22](https://arxiv.org/abs/2208.06763) [![download](https://img.shields.io/badge/-QAnn-blue)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [SSO19](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.060504) [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [BL22](https://arxiv.org/abs/2206.10576) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [SM21](https://arxiv.org/abs/2103.10309)
 
 	*Many problems in plasma physics may be formulated, either exactly or approximately, as a problem of the form* Ax = b *where* A *and* b *encode the information about the system (including its initial conditions, if applicable), and the goal is to compute* x *, which encodes the desired data.*
   
