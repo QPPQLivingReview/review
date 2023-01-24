@@ -34,6 +34,8 @@ The fact that a paper is listed in this document does not endorse or validate it
 	
 In order to be as useful as possible, this document will continue to evolve so please check back before you write your next paper. You can simply download the **.bib** file to get all of the latest references. Please consider citing Ref. [AC23](https://arxiv.org/abs/none) when referring to this living review.
 
+![](https://img.shields.io/badge/-NISQ-limegreen.svg)
+
 *  **Modern reviews**
 
 	*Below are links to (static) general and specialized reviews.*
