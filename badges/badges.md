@@ -1,0 +1,7 @@
+![](https://img.shields.io/badge/-NISQ-limegreen)
+![](https://img.shields.io/badge/-FTol-red)
+![](https://img.shields.io/badge/-QAnn-blue) 
+![](https://img.shields.io/badge/-QIns-grey) 
+![](https://img.shields.io/badge/-Theo-darkred)
+![](https://img.shields.io/badge/-Num-darkblue)
+![](https://img.shields.io/badge/-Exp-darkgreen)
