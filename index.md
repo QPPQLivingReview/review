@@ -94,7 +94,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 				
 				$$\dfrac{\partial }{\partial t} f(x,p,t) + \dfrac{d r}{d t} \dfrac{\partial }{\partial r} f + \dfrac{d p}{d t} \dfrac{\partial }{\partial p} f = \mathcal{C}$$
 			
-				*where* $\mathcal{C}$ *is a collision term. The* $dp/dt$ *term can be coupled the (Electromagnetic) fields either through to the Poisson or the set of Maxwell’s equations.*
+				*where* C *is a collision term. The* dp/dt *term can be coupled the (Electromagnetic) fields either through to the Poisson or the set of Maxwell’s equations.*
 				
 			* **Poisson**  [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [Bra+20](https://arxiv.org/abs/1909.05820) [Sat+21](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.104.052409) [AK22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.104.052409) [Sah+22](https://arxiv.org/abs/2210.16668) [Lub+20](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.101.010301) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Cao+13](https://doi.org/10.1088/1367-2630/15/1/013021) [![download](https://img.shields.io/badge/-Num-darkblue)]() [Arr+19](https://doi.org/10.1103/PhysRevA.100.032306) [Ric+22](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.106.052431) [Liu+21](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.104.022418) [Wan+20](https://link.springer.com/article/10.1007/s11128-020-02669-7)
 			
@@ -106,7 +106,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 
 		* **Semi-classical Schrödinger** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLL22](https://quantum-journal.org/papers/q-2022-06-17-739/)
 			
-			*The semi-classical regime of the Schrödinger equation corresponds to the case when ħ ≪ 1. Possible applications include: quantum chemistry, including Born- Oppenheimer molecular dynamics and Ehrenfest dynamics.*
+			*The semi-classical regime of the Schrödinger equation corresponds to the case when ħ ≪ 1. Possible applications include: quantum chemistry, including Born-Oppenheimer molecular dynamics and Ehrenfest dynamics.*
 			
 		* **Time-dependent Schrödinger** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [Jou22](https://arxiv.org/abs/2205.02358) [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLL22](https://quantum-journal.org/papers/q-2022-06-17-739/)
 		
@@ -134,11 +134,11 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 		* **Fokker-Planck** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Gar21](https://arxiv.org/abs/1909.06619)
 	
-		*The Fokker-Planck equation for the probability density* $p(x, t)$ *can be written as*
+		*The Fokker-Planck equation for the probability density* p(x, t) *can be written as*
 		
 		$$\dfrac{\partial }{\partial t} p(x,t)  = - \dfrac{\partial }{\partial x} \left( \mu(x,t)~p(x,t)  \right) + \dfrac{\partial^2 }{\partial x^2} \left( D(x,t)~p(x,t) \right)$$
 		
-		*where* $\mu$ *and* $D$ *are the drift and diffusion coefficients (which may be time-dependent).*
+		*where* μ *and* D *are the drift and diffusion coefficients (which may be time-dependent).*
 		
 		* **Hamilton-Jacobi-Bellman** [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Pat+22](https://arxiv.org/abs/2208.02235)
 
@@ -188,7 +188,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 		* **Nonlinear-Schrödinger** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Lub+20](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.101.010301)
 			
-			*Similar to the Schrödinger-Poisson system, however the potential is created by the square absolute value of the wave-function* $V= \vert \psi \vert^2$ *which induces a cubic nonlinearity in the equations.*
+			*Similar to the Schrödinger-Poisson system, however the potential is created by the square absolute value of the wave-function* V=|ψ|^2 *which induces a cubic nonlinearity in the equations.*
 			
 		* **Burger’s** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Oz+21](https://link.springer.com/article/10.1007/s11128-021-03391-8)
 			
@@ -209,7 +209,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 			* **Incompressible** [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [LEK22](https://arxiv.org/abs/2204.02912) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Lap22](https://arxiv.org/abs/2206.00419)
 			
-				*The incompressible Navier-Stokes equations can be applied for low enough Mach numbers, and cannot be used to accurately simulate density or pres- sure waves like sound or shock waves. The fluid density is considered constant* $\rho = \rho_0$.
+				*The incompressible Navier-Stokes equations can be applied for low enough Mach numbers, and cannot be used to accurately simulate density or pres- sure waves like sound or shock waves. The fluid density is considered constant* ρ = ρ0.
 
 		* **Hamilton-Jacobi** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [JLY22c](https://arxiv.org/abs/2209.08478) [JL22](https://arxiv.org/abs/2202.07834)
 			
@@ -227,25 +227,26 @@ In order to be as useful as possible, this document will continue to evolve so p
 
 	*(Integro-)differential equations in which one or more of the terms is a stochastic process, leading to a solution which is stochastic in nature. Stochastic Differential Equations (SDEs) can be used to model physical systems subject to thermal fluctuations.*
 	
-	*Through the Feynman-Kac formula, many common SDEs can be reduced to solving a PDE for the probability density of interest, as is the case for the Fokker-Planck equation.*
+	*Through the Feynman-Kac formula, many common SDEs can be reduced to solving a PDE for the probability density of interest, as is the case for the 
+	-Planck equation.*
 	
 	*For ease of search, PDEs arising from stochastic processes are indicated both here and in the previous section.*
 	
 	* **Fokker-Planck** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703) [![download](https://img.shields.io/badge/-QIns-grey)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [Gar21](https://arxiv.org/abs/1909.06619)
 	
-		*The Fokker-Planck equation for the probability density* $p(x, t)$ *can be written as*
+		*The Fokker-Planck equation for the probability density* p(x, t) *can be written as*
 		
 		$$\dfrac{\partial }{\partial t} p(x,t)  = - \dfrac{\partial }{\partial x} \left( \mu(x,t)~p(x,t)  \right) + \dfrac{\partial^2 }{\partial x^2} \left( D(x,t)~p(x,t)  \right)$$
 		
-		*where* $\mu$ *and* $D$ *are the drift and diffusion coefficients (which may be time-dependent).*
+		*where* μ *and* D *are the drift and diffusion coefficients (which may be time-dependent).*
 		
 	* **Linear Boltzmann/Rate equation** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Num-darkblue)]() [JLY22b](https://arxiv.org/abs/2212.14703)
 
-		*The linear Boltzmann or Rate equation is a stochastic integro-differential equation for the probability density* $p(x, t)$ *can be written as*
+		*The linear Boltzmann or Rate equation is a stochastic integro-differential equation for the probability density* p(x, t) *can be written as*
 		
 		$$\dfrac{d }{d t} p(x,t)  = \int p(x',t) W(x,x') dx' - p(x,t) \int W(x',x) dx' $$
 		
-		*where* $W(x,x')$ *is the probability rate of transition from state* $x'$ *to state* $x$, *where* $dp/dt$ *can include partial derivatives of* $p(x, t)$.
+		*where* W(x,x') *is the probability rate of transition from state* x' *to state* x, *where* dp/dt *can include partial derivatives of* p(x, t).
 
 * **Other techniques:**
 
@@ -263,11 +264,11 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 		$$H_\mathrm{KvN} = - i \sum_j \left(F_j \frac{\partial}{\partial x_j} + \frac{1}{2}  \frac{\partial F_j}{\partial x_j} \right)$$
 		
-		*Furthermore, the probability density is interpreted as* $\rho = \vert \psi \vert^2$  *. Applications may include the Vlasov-Maxwell coupled system of equations.*
+		*Furthermore, the probability density is interpreted as* ρ = |ψ|^2  *. Applications may include the Vlasov-Maxwell coupled system of equations.*
 	
 	* **Quantum nonlinear Schrödinger linearization formulation** [![download](https://img.shields.io/badge/-FTol-red)]() [![download](https://img.shields.io/badge/-Theo-darkred)]() [Llo+20](https://arxiv.org/abs/2011.06571)
 	
-		*Formulation of ODEs/PDEs of the type* $dx/dt + f(x) x = b(t)$ *with* $f = x^{\dagger \otimes m} F x^{\otimes m}$ *, as nonlinear Schrödinger equations. Potential applications of the method may in- clude the Navier-Stokes equation, plasma hydrodynamics, epidemiology.*
+		*Formulation of ODEs/PDEs of the type* dx/dt + f(x) x = b(t) *with* $f = x^{\dagger \otimes m} F x^{\otimes m}$ *, as nonlinear Schrödinger equations. Potential applications of the method may include the Navier-Stokes equation, plasma hydrodynamics, epidemiology.*
 		
 	* **Madelung transform for nonlinear relativistic fluids** [![download](https://img.shields.io/badge/-Num-darkblue)]() [Hat+19](https://www.nature.com/articles/s41598-019-40059-x) [![download](https://img.shields.io/badge/-NISQ-limegreen.svg)]() [![download](https://img.shields.io/badge/-Exp-darkgreen)]() [Zyl+22](https://arxiv.org/abs/2202.00918)
 	
