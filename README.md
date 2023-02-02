@@ -17,12 +17,13 @@ See the file [CONTRIBUTING.md](https://github.com/QPPQLivingReview/review/blob/m
 Please consider citing the [arXiv pre-print](https://arxiv.org/abs/none) when referring to this living review. Latex users can use the following BibTex entry.
 ```
 @misc{qppqlivingreview,
-	author = {Amaro, Óscar and Cruz, Diogo},
-	title = "{A Living Review of Quantum Computing for Plasma Physics}",
-	publisher = {arXiv},
+  author = {Amaro, Óscar and Cruz, Diogo},
+  title = {A Living Review of Quantum Computing for Plasma Physics},
+  publisher = {arXiv},
   year = {2023},
-	doi = {NONE},
-	url={https://arxiv.org/abs/none},
-	copyright = {Creative Commons Attribution 4.0 International}
+  doi = {10.48550/ARXIV.2302.00001},
+  url = {https://arxiv.org/abs/2302.00001},
+  keywords = {Plasma Physics (physics.plasm-ph), Quantum Physics (quant-ph), FOS: Physical sciences, FOS: Physical sciences},
+  copyright = {arXiv.org perpetual, non-exclusive license}
 }
 ```
