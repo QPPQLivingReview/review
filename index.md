@@ -4,7 +4,7 @@ layout: default
 
 # *A Living Review of Quantum Computing for Plasma Physics*
 
-*Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses. As a living document, it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.*
+*Quantum Computing promises accelerated simulation of certain classes of problems, in particular in plasma physics. The goal of this document is to provide a comprehensive list of citations for those developing and applying these approaches to experimental or theoretical analyses. As a [living document](https://github.com/QPPQLivingReview/review), it will be updated as often as possible to incorporate the latest developments.  Suggestions are most welcome.*
 
 [![download](https://img.shields.io/badge/download-review-blue.svg)](https://QPPQLivingReview.github.io/review/review/review.pdf)
 
@@ -33,7 +33,7 @@ We may omit tags if the paper is referenced and tagged in a subsequent subsectio
 	
 The fact that a paper is listed in this document does not endorse or validate its content - that is for the community (and for peer-review) to decide. Furthermore, the classification here is a best attempt and may have flaws - please let us know if (a) we have missed a paper you think should be included, (b) a paper has been misclassified or wrongly tagged, or (c) a citation for a paper is not correct or if the journal information is now available.
 	
-In order to be as useful as possible, this document will continue to evolve so please check back before you write your next paper. You can simply download the **.bib** file to get all of the latest references. Please consider citing Ref. [AC23](https://arxiv.org/abs/none) when referring to this living review.
+In order to be as useful as possible, this document will continue to evolve so please check back before you write your next paper. You can simply download the **.bib** file to get all of the latest references. Please consider citing Ref. [AC23](https://arxiv.org/abs/2302.00001) when referring to this living review.
 
 *  **Modern reviews**
 
