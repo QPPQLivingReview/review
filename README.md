@@ -14,7 +14,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 See the file [CONTRIBUTING.md](https://github.com/QPPQLivingReview/review/blob/main/CONTRIBUTING.md).
 
 ## Citation
-Please consider citing the [arXiv pre-print](https://arxiv.org/abs/none) when referring to this living review. Latex users can use the following BibTex entry.
+Please consider citing the [arXiv pre-print](https://arxiv.org/abs/2302.00001) when referring to this living review. Latex users can use the following BibTex entry.
 ```
 @misc{qppqlivingreview,
   author = {Amaro, Óscar and Cruz, Diogo},
