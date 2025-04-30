@@ -41,7 +41,13 @@ In order to be as useful as possible, this document will continue to evolve so p
 
 	* Applications of Quantum Computing to Plasma Simulations [DS21a](https://pubs.aip.org/aip/pop/article/28/9/092101/595424/On-applications-of-quantum-computing-to-plasma)
 	* Quantum Computing for Fusion Energy Science Applications [Jos+22](https://pubs.aip.org/aip/pop/article/30/1/010501/2867588/Quantum-computing-for-fusion-energy-science)
- 
+
+* **Special issues**
+  	
+	*Peer-reviewed journal special issues*
+
+  	* JPP *Plasma and quantum information sciences* (Submission Deadline: 28th February 2025) [QIS](https://www.cambridge.org/core/journals/journal-of-plasma-physics/collections/plasma-and-quantum-information-sciences)
+
 *  **System of linear equations**  ![](badges/NISQ.png) ![](badges/Num.png) [HBR21](https://arxiv.org/abs/1909.07344) ![](badges/Exp.png) [Bra+20](https://arxiv.org/abs/1909.05820)  [Xu+21](https://www.sciencedirect.com/science/article/pii/S2095927321004631) ![](badges/FTol.png) ![](badges/Theo.png) [HHL09](https://doi.org/10.1103/PhysRevLett.103.150502) [CJS13](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.110.250504) [CKS17](https://epubs.siam.org/doi/10.1137/16M1087072) [WX22](https://arxiv.org/abs/2208.06763) ![](badges/QAnn.png) ![](badges/Num.png) [SSO19](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.060504) ![](badges/Exp.png) [BL22](https://arxiv.org/abs/2206.10576) ![](badges/QIns.png) ![](badges/Theo.png) [SM21](https://arxiv.org/abs/2103.10309)
 
 	*Many problems in plasma physics may be formulated, either exactly or approximately, as a problem of the form* Ax = b *where* A *and* b *encode the information about the system (including its initial conditions, if applicable), and the goal is to compute* x *, which encodes the desired data.*
