@@ -35,6 +35,8 @@ The fact that a paper is listed in this document does not endorse or validate it
 	
 In order to be as useful as possible, this document will continue to evolve so please check back before you write your next paper. You can simply download the **.bib** file to get all of the latest references. Please consider citing Ref. [AC23](https://arxiv.org/abs/2302.00001) when referring to this living review.
 
+--- 
+
 *  **Modern reviews**
 
 	*Below are links to (static) general and specialized reviews.*
@@ -47,6 +49,8 @@ In order to be as useful as possible, this document will continue to evolve so p
 	*Peer-reviewed journal special issues*
 
   	* JPP *Plasma and quantum information sciences* (Submission Deadline: 28th February 2025) [QIS](https://www.cambridge.org/core/journals/journal-of-plasma-physics/collections/plasma-and-quantum-information-sciences)
+
+--- 
 
 *  **System of linear equations**  ![](badges/NISQ.png) ![](badges/Num.png) [HBR21](https://arxiv.org/abs/1909.07344) ![](badges/Exp.png) [Bra+20](https://arxiv.org/abs/1909.05820)  [Xu+21](https://www.sciencedirect.com/science/article/pii/S2095927321004631) ![](badges/FTol.png) ![](badges/Theo.png) [HHL09](https://doi.org/10.1103/PhysRevLett.103.150502) [CJS13](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.110.250504) [CKS17](https://epubs.siam.org/doi/10.1137/16M1087072) [WX22](https://arxiv.org/abs/2208.06763) ![](badges/QAnn.png) ![](badges/Num.png) [SSO19](https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.060504) ![](badges/Exp.png) [BL22](https://arxiv.org/abs/2206.10576) ![](badges/QIns.png) ![](badges/Theo.png) [SM21](https://arxiv.org/abs/2103.10309)
 
