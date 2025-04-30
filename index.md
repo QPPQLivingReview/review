@@ -236,7 +236,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 			*Stefan problems are a particular kind of boundary value problems for a system of PDEs in which the boundary between the phases can move with time.*
 
-* **Stochastic/difusive processes** ![](badges/NISQ.png) ![](badges/Num.png) [Kub+20](https://arxiv.org/abs/2012.04429) [Alg+22](https://quantum-journal.org/papers/q-2022-06-07-730/) ![](badges/FTol.png) ![](badges/Num.png) [An+21](https://quantum-journal.org/papers/q-2021-06-24-481/)
+* **Stochastic/difusive processes** ![](badges/NISQ.png) ![](badges/Num.png) [Kub+20](https://arxiv.org/abs/2012.04429) [Alg+22](https://quantum-journal.org/papers/q-2022-06-07-730/) [Am+25](https://arxiv.org/abs/2411.17517) ![](badges/FTol.png) ![](badges/Num.png) [An+21](https://quantum-journal.org/papers/q-2021-06-24-481/)
 
 	*(Integro-)differential equations in which one or more of the terms is a stochastic process, leading to a solution which is stochastic in nature. Stochastic Differential Equations (SDEs) can be used to model physical systems subject to thermal fluctuations.*
 	
