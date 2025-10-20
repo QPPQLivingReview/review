@@ -263,7 +263,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 
 * **Other techniques:**
 
-	*  **Linear embedding of nonlinear dynamical systems** ![](badges/FTol.png) ![](badges/Theo.png) [ESP21](https://aip.scitation.org/doi/10.1063/5.0040313) [JLY22c](https://arxiv.org/abs/2209.08478) ![](badges/Num.png) [Liu+20](https://arxiv.org/abs/2011.03185)
+	*  **Linear embedding of nonlinear dynamical systems** ![](badges/FTol.png) ![](badges/Theo.png) [ESP21](https://aip.scitation.org/doi/10.1063/5.0040313) [JLY22c](https://arxiv.org/abs/2209.08478) ![](badges/Num.png) [Liu+20](https://arxiv.org/abs/2011.03185) [Nov25](https://arxiv.org/abs/2510.15715v1)
 	
 		*Several linear embedding of nonlinear dynamical systems have been developed to extend the class of problems that can be tackled by quantum computers. These include Koopman–von Neumann formulation, Quantum nonlinear Schrödinger lineariza- tion formulation and Carleman linearization, amongst others.*
 	
