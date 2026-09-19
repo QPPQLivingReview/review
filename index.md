@@ -201,7 +201,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 			
 		* **Nonlinear-Schrödinger** ![](badges/NISQ.png) ![](badges/Exp.png) [Lub+20](https://journals.aps.org/pra/abstract/10.1103/PhysRevA.101.010301)
 			
-			*Similar to the Schrödinger-Poisson system, however the potential is created by the square absolute value of the wave-function* V=|ψ|^2 *which induces a cubic nonlinearity in the equations.*
+			*Similar to the Schrödinger-Poisson system, however the potential is created by the square absolute value of the wave-function* $$V = \vert\psi\vert^2$$ *which induces a cubic nonlinearity in the equations.*
 			
 		* **Burger’s** ![](badges/FTol.png) ![](badges/Num.png) [Oz+21](https://link.springer.com/article/10.1007/s11128-021-03391-8)
 			
@@ -240,8 +240,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 
 	*(Integro-)differential equations in which one or more of the terms is a stochastic process, leading to a solution which is stochastic in nature. Stochastic Differential Equations (SDEs) can be used to model physical systems subject to thermal fluctuations.*
 	
-	*Through the Feynman-Kac formula, many common SDEs can be reduced to solving a PDE for the probability density of interest, as is the case for the 
-	-Planck equation.*
+	*Through the Feynman-Kac formula, many common SDEs can be reduced to solving a PDE for the probability density of interest, as is the case for the Fokker-Planck equation.*
 	
 	*For ease of search, PDEs arising from stochastic processes are indicated both here and in the previous section.*
 	
@@ -277,8 +276,8 @@ In order to be as useful as possible, this document will continue to evolve so p
 		
 		$$H_\mathrm{KvN} = - i \sum_j \left(F_j \frac{\partial}{\partial x_j} + \frac{1}{2}  \frac{\partial F_j}{\partial x_j} \right)$$
 		
-		*Furthermore, the probability density is interpreted as* ρ = |ψ|^2  *. Applications may include the Vlasov-Maxwell coupled system of equations.*
-	
+		*Furthermore, the probability density is interpreted as* $$\rho = \vert\psi\vert^2$$*. Applications may include the Vlasov-Maxwell coupled system of equations.*
+
 	* **Quantum nonlinear Schrödinger linearization formulation** ![](badges/FTol.png) ![](badges/Theo.png) [Llo+20](https://arxiv.org/abs/2011.06571)
 	
 		*Formulation of ODEs/PDEs of the type* dx/dt + f(x) x = b(t) *with* f = x^(†⊗m) F x^(⊗m) *, as nonlinear Schrödinger equations. Potential applications of the method may include the Navier-Stokes equation, plasma hydrodynamics, epidemiology.*
