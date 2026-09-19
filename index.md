@@ -280,7 +280,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 
 	* **Quantum nonlinear Schrödinger linearization formulation** ![](badges/FTol.png) ![](badges/Theo.png) [Llo+20](https://arxiv.org/abs/2011.06571)
 	
-		*Formulation of ODEs/PDEs of the type* dx/dt + f(x) x = b(t) *with* f = x^(†⊗m) F x^(⊗m) *, as nonlinear Schrödinger equations. Potential applications of the method may include the Navier-Stokes equation, plasma hydrodynamics, epidemiology.*
+		*Formulation of ODEs/PDEs of the type* $$dx/dt + f(x) x = b(t)$$ *with* $$f = (x^{\dagger})^{\otimes m} ~F ~x^{\otimes m} $$*, as nonlinear Schrödinger equations. Potential applications of the method may include the Navier-Stokes equation, plasma hydrodynamics, epidemiology.*
 		
 	* **Madelung transform for nonlinear relativistic fluids** ![](badges/Num.png) [Hat+19](https://www.nature.com/articles/s41598-019-40059-x) ![](badges/NISQ.png) ![](badges/Exp.png) [Zyl+22](https://arxiv.org/abs/2202.00918)
 	
