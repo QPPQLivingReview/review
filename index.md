@@ -191,7 +191,7 @@ In order to be as useful as possible, this document will continue to evolve so p
 
 			*General class of PDEs with time-domain.*
 			
-		* **Vlasov-Poisson** ![](badges/QIns.png) ![](badges/Num.png) [YL22](https://arxiv.org/abs/2205.11990)
+		* **Vlasov-Poisson** ![](badges/FTol.png) ![](badges/Theo.png) [VA26](https://quantum-journal.org/papers/q-2026-09-10-2206/),  ![](badges/QIns.png) ![](badges/Num.png) [YL22](https://arxiv.org/abs/2205.11990)
 			
 			*The coupled Vlasov-Poisson system describes the self-consistent evolution of charges and their (electrical) potentials. Because of this, the system is nonlinear.*
 			
