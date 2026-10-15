@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.8" bltxversion="3.17" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.11" bltxversion="3.20" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -37,6 +37,11 @@
     <bcf:option type="singlevalued">
       <bcf:key>alphaothers</bcf:key>
       <bcf:value>+</bcf:value>
+    </bcf:option>
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
@@ -135,6 +140,10 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>nosortothers</bcf:key>
+      <bcf:value>0</bcf:value>
+    </bcf:option>
+    <bcf:option type="singlevalued">
+      <bcf:key>pluralothers</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -272,6 +281,11 @@
   </bcf:options>
   <!-- online -->
   <bcf:options component="biblatex" type="online">
+    <bcf:option type="multivalued">
+      <bcf:key>extradatecontext</bcf:key>
+      <bcf:value order="1">labelname</bcf:value>
+      <bcf:value order="2">labeltitle</bcf:value>
+    </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>labelalpha</bcf:key>
       <bcf:value>1</bcf:value>
@@ -372,11 +386,11 @@
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skiplab</bcf:key>
+      <bcf:key>skipbiblist</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
-      <bcf:key>skipbiblist</bcf:key>
+      <bcf:key>skiplab</bcf:key>
       <bcf:value>0</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
@@ -488,9 +502,11 @@
     <bcf:option datatype="xml">inheritance</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">uniquenametemplate</bcf:option>
+    <bcf:option datatype="xml">namehashtemplate</bcf:option>
     <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
     <bcf:option datatype="xml">sortingtemplate</bcf:option>
     <bcf:option datatype="xml">extradatespec</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -599,6 +615,7 @@
     <bcf:option datatype="boolean">labeltitle</bcf:option>
     <bcf:option datatype="boolean">labeltitleyear</bcf:option>
     <bcf:option datatype="boolean">labeldateparts</bcf:option>
+    <bcf:option datatype="boolean">pluralothers</bcf:option>
     <bcf:option datatype="boolean">nohashothers</bcf:option>
     <bcf:option datatype="boolean">nosortothers</bcf:option>
     <bcf:option datatype="boolean">noroman</bcf:option>
@@ -713,6 +730,7 @@
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">sortexclusion</bcf:option>
     <bcf:option datatype="xml">sortinclusion</bcf:option>
+    <bcf:option datatype="xml">extradatecontext</bcf:option>
     <bcf:option datatype="xml">labelnamespec</bcf:option>
     <bcf:option datatype="xml">labeltitlespec</bcf:option>
     <bcf:option datatype="xml">labeldatespec</bcf:option>
@@ -731,9 +749,10 @@
   </bcf:optionscope>
   <bcf:optionscope type="ENTRY">
     <bcf:option datatype="string">noinherit</bcf:option>
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
     <bcf:option datatype="string" backendout="1">indexing</bcf:option>
@@ -810,9 +829,10 @@
     <bcf:option datatype="integer" backendout="1">minalphanames</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAMELIST">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">uniquelist</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
@@ -826,9 +846,10 @@
     <bcf:option datatype="boolean" backendout="1">useprefix</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAME">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
     <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
@@ -1042,8 +1063,15 @@
     <bcf:namepart order="2" base="1">family</bcf:namepart>
     <bcf:namepart order="3">given</bcf:namepart>
   </bcf:uniquenametemplate>
+  <!-- NAME HASH TEMPLATES -->
+  <bcf:namehashtemplate name="global">
+    <bcf:namepart order="1" hashscope="full">family</bcf:namepart>
+    <bcf:namepart order="2" hashscope="full">given</bcf:namepart>
+    <bcf:namepart order="3" hashscope="full">prefix</bcf:namepart>
+    <bcf:namepart order="4" hashscope="full">suffix</bcf:namepart>
+  </bcf:namehashtemplate>
   <!-- SORTING NAME KEY TEMPLATES -->
-  <bcf:sortingnamekeytemplate name="global">
+  <bcf:sortingnamekeytemplate name="global" visibility="sort">
     <bcf:keypart order="1">
       <bcf:part type="namepart" order="1" use="1">prefix</bcf:part>
       <bcf:part type="namepart" order="2">family</bcf:part>
@@ -2342,110 +2370,159 @@
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
     <bcf:datasource type="file" datatype="bibtex" glob="false">QPPQ.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex" glob="false">extra.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">qppqlivingreview</bcf:citekey>
-    <bcf:citekey order="2">dodin2020applications</bcf:citekey>
-    <bcf:citekey order="3">linden2020quantum</bcf:citekey>
-    <bcf:citekey order="4">engel2020vlasov</bcf:citekey>
-    <bcf:citekey order="5">novikau_quantum_2021</bcf:citekey>
-    <bcf:citekey order="6">liu2020efficient</bcf:citekey>
-    <bcf:citekey order="7">Kowalski_doi:10.1142/1347</bcf:citekey>
-    <bcf:citekey order="8">lloyd2020quantum</bcf:citekey>
-    <bcf:citekey order="9">dodin2021quantum</bcf:citekey>
-    <bcf:citekey order="10">Engel2021_doi:10.1063/5.0040313</bcf:citekey>
-    <bcf:citekey order="11">PhysRevA.103.062608</bcf:citekey>
-    <bcf:citekey order="12">IlonJoseph2020</bcf:citekey>
-    <bcf:citekey order="13">Lubasch2020_PhysRevA.101.010301</bcf:citekey>
-    <bcf:citekey order="14">Mocz_2021</bcf:citekey>
-    <bcf:citekey order="15">Lubasch2020_PhysRevA.101.010301</bcf:citekey>
-    <bcf:citekey order="16">Kyriienko2021_PhysRevA.103.052416</bcf:citekey>
-    <bcf:citekey order="17">PhysRevA.103.052425</bcf:citekey>
-    <bcf:citekey order="18">Alghassi2022variationalquantum</bcf:citekey>
-    <bcf:citekey order="19">leong_variational_2022</bcf:citekey>
-    <bcf:citekey order="20">demirdjian_variational_2022</bcf:citekey>
-    <bcf:citekey order="21">Shi2018_PhysRevE.97.053206</bcf:citekey>
-    <bcf:citekey order="22">vahala_vahala_soe_ram_2020</bcf:citekey>
-    <bcf:citekey order="23">bravo-prieto_variational_2020</bcf:citekey>
-    <bcf:citekey order="23">huang_near-term_2019</bcf:citekey>
-    <bcf:citekey order="23">xu_variational_2021</bcf:citekey>
-    <bcf:citekey order="24">borle_how_2022</bcf:citekey>
-    <bcf:citekey order="25">shao_faster_2021</bcf:citekey>
-    <bcf:citekey order="26">lubasch_variational_2020</bcf:citekey>
-    <bcf:citekey order="27">chang_quantum_2019</bcf:citekey>
-    <bcf:citekey order="28">zanger_quantum_2021</bcf:citekey>
-    <bcf:citekey order="29">zanger_quantum_2021</bcf:citekey>
-    <bcf:citekey order="30">srivastava_box_2019</bcf:citekey>
-    <bcf:citekey order="31">zanger_quantum_2021</bcf:citekey>
-    <bcf:citekey order="32">childs_high-precision_2021</bcf:citekey>
-    <bcf:citekey order="33">garcia-ripoll_quantum-inspired_2021</bcf:citekey>
-    <bcf:citekey order="34">criado_qade_2022</bcf:citekey>
-    <bcf:citekey order="35">criado_qade_2022</bcf:citekey>
-    <bcf:citekey order="36">criado_qade_2022</bcf:citekey>
-    <bcf:citekey order="37">bravo-prieto_variational_2020</bcf:citekey>
-    <bcf:citekey order="38">bravo-prieto_variational_2020</bcf:citekey>
-    <bcf:citekey order="38">liu_variational_2021</bcf:citekey>
-    <bcf:citekey order="38">sato_variational_2021</bcf:citekey>
-    <bcf:citekey order="39">cao_quantum_2013</bcf:citekey>
-    <bcf:citekey order="40">ye_quantum-inspired_2022</bcf:citekey>
-    <bcf:citekey order="41">garcia-ripoll_quantum-inspired_2021</bcf:citekey>
-    <bcf:citekey order="42">patel_quantum-inspired_2022</bcf:citekey>
-    <bcf:citekey order="43">patel_quantum-inspired_2022</bcf:citekey>
-    <bcf:citekey order="44">patel_quantum-inspired_2022</bcf:citekey>
-    <bcf:citekey order="45">fontanela_short_2021</bcf:citekey>
-    <bcf:citekey order="45">miyamoto_pricing_2022</bcf:citekey>
-    <bcf:citekey order="46">ewe_variational_2022</bcf:citekey>
-    <bcf:citekey order="47">fontanela_short_2021</bcf:citekey>
-    <bcf:citekey order="47">miyamoto_pricing_2022</bcf:citekey>
-    <bcf:citekey order="47">leong_variational_2022</bcf:citekey>
-    <bcf:citekey order="48">linden_quantum_2022</bcf:citekey>
-    <bcf:citekey order="49">leong_variational_2022</bcf:citekey>
-    <bcf:citekey order="50">leong_variational_2022</bcf:citekey>
-    <bcf:citekey order="51">leong_variational_2022</bcf:citekey>
-    <bcf:citekey order="52">mcardle_variational_2019</bcf:citekey>
-    <bcf:citekey order="53">qppqlivingreview</bcf:citekey>
-    <bcf:citekey order="54">dodin2020applications</bcf:citekey>
-    <bcf:citekey order="55">linden2020quantum</bcf:citekey>
-    <bcf:citekey order="56">engel2020vlasov</bcf:citekey>
-    <bcf:citekey order="57">novikau_quantum_2021</bcf:citekey>
-    <bcf:citekey order="58">liu2020efficient</bcf:citekey>
-    <bcf:citekey order="59">Kowalski_doi:10.1142/1347</bcf:citekey>
-    <bcf:citekey order="60">lloyd2020quantum</bcf:citekey>
-    <bcf:citekey order="61">dodin2021quantum</bcf:citekey>
-    <bcf:citekey order="62">Engel2021_doi:10.1063/5.0040313</bcf:citekey>
-    <bcf:citekey order="63">PhysRevA.103.062608</bcf:citekey>
-    <bcf:citekey order="64">IlonJoseph2020</bcf:citekey>
-    <bcf:citekey order="65">Lubasch2020_PhysRevA.101.010301</bcf:citekey>
-    <bcf:citekey order="66">Mocz_2021</bcf:citekey>
-    <bcf:citekey order="67">Kyriienko2021_PhysRevA.103.052416</bcf:citekey>
-    <bcf:citekey order="68">PhysRevA.103.052425</bcf:citekey>
-    <bcf:citekey order="69">Alghassi2022variationalquantum</bcf:citekey>
-    <bcf:citekey order="70">leong_variational_2022</bcf:citekey>
-    <bcf:citekey order="71">demirdjian_variational_2022</bcf:citekey>
-    <bcf:citekey order="72">Shi2018_PhysRevE.97.053206</bcf:citekey>
-    <bcf:citekey order="73">vahala_vahala_soe_ram_2020</bcf:citekey>
-    <bcf:citekey order="74">bravo-prieto_variational_2020</bcf:citekey>
-    <bcf:citekey order="75">huang_near-term_2019</bcf:citekey>
-    <bcf:citekey order="76">xu_variational_2021</bcf:citekey>
-    <bcf:citekey order="77">borle_how_2022</bcf:citekey>
-    <bcf:citekey order="78">shao_faster_2021</bcf:citekey>
-    <bcf:citekey order="79">lubasch_variational_2020</bcf:citekey>
-    <bcf:citekey order="80">chang_quantum_2019</bcf:citekey>
-    <bcf:citekey order="81">zanger_quantum_2021</bcf:citekey>
-    <bcf:citekey order="82">srivastava_box_2019</bcf:citekey>
-    <bcf:citekey order="83">childs_high-precision_2021</bcf:citekey>
-    <bcf:citekey order="84">garcia-ripoll_quantum-inspired_2021</bcf:citekey>
-    <bcf:citekey order="85">criado_qade_2022</bcf:citekey>
-    <bcf:citekey order="86">liu_variational_2021</bcf:citekey>
-    <bcf:citekey order="87">sato_variational_2021</bcf:citekey>
-    <bcf:citekey order="88">cao_quantum_2013</bcf:citekey>
-    <bcf:citekey order="89">ye_quantum-inspired_2022</bcf:citekey>
-    <bcf:citekey order="90">patel_quantum-inspired_2022</bcf:citekey>
-    <bcf:citekey order="91">fontanela_short_2021</bcf:citekey>
-    <bcf:citekey order="92">miyamoto_pricing_2022</bcf:citekey>
-    <bcf:citekey order="93">ewe_variational_2022</bcf:citekey>
-    <bcf:citekey order="94">linden_quantum_2022</bcf:citekey>
-    <bcf:citekey order="95">mcardle_variational_2019</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">qppqlivingreview</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">dodinApplicationsQuantumComputing2021</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">josephQuantumComputingFusion2022a</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">huangNeartermQuantumAlgorithms2021</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">bravo-prietoVariationalQuantumLinear2020</bcf:citekey>
+    <bcf:citekey order="5" intorder="2">xuVariationalAlgorithmsLinear2021</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">harrowQuantumAlgorithmLinear2009</bcf:citekey>
+    <bcf:citekey order="6" intorder="2">claderPreconditionedQuantumLinear2013</bcf:citekey>
+    <bcf:citekey order="6" intorder="3">childsQuantumAlgorithmSystems2017</bcf:citekey>
+    <bcf:citekey order="6" intorder="4">wangEfficientQuantumAlgorithms2022</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">subasiQuantumAlgorithmsSystems2019</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">borleHowViableQuantum2022</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">shaoFasterQuantuminspiredAlgorithms2021</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">dodinQuantumComputationNonlinear2021</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">xueQuantumNewtonMethod2021</bcf:citekey>
+    <bcf:citekey order="11" intorder="2">xueQuantumAlgorithmSolving2022</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">changQuantumAnnealingSystems2019</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">zangerQuantumAlgorithmsSolving2021</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">berryHighorderQuantumAlgorithm2014</bcf:citekey>
+    <bcf:citekey order="14" intorder="2">berryQuantumAlgorithmLinear2017</bcf:citekey>
+    <bcf:citekey order="14" intorder="3">childsQuantumSpectralMethods2020</bcf:citekey>
+    <bcf:citekey order="14" intorder="4">fangTimemarchingBasedQuantum2022</bcf:citekey>
+    <bcf:citekey order="14" intorder="5">jinQuantumSimulationPartial2022</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">jinQuantumSimulationPartial2022a</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">zangerQuantumAlgorithmsSolving2021</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">srivastavaBoxAlgorithmSolution2019</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">ricardoAlternativesNonhomogeneousPartial2022</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">criadoQadeSolvingDifferential2022</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">kyriienkoSolvingNonlinearDifferential2021</bcf:citekey>
+    <bcf:citekey order="20" intorder="2">shiSimulatingNonnativeCubic2021</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">leytonQuantumAlgorithmSolve2008</bcf:citekey>
+    <bcf:citekey order="21" intorder="2">dodinQuantumComputationNonlinear2021</bcf:citekey>
+    <bcf:citekey order="21" intorder="3">lloydQuantumAlgorithmNonlinear2020</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">jinQuantumSimulationPartial2022a</bcf:citekey>
+    <bcf:citekey order="22" intorder="2">liuEfficientQuantumAlgorithm2021</bcf:citekey>
+    <bcf:citekey order="22" intorder="3">suranaCarlemanLinearizationBased2022b</bcf:citekey>
+    <bcf:citekey order="23" intorder="1">zangerQuantumAlgorithmsSolving2021</bcf:citekey>
+    <bcf:citekey order="24" intorder="1">garcia-molinaQuantumFourierAnalysis2022</bcf:citekey>
+    <bcf:citekey order="25" intorder="1">childsHighprecisionQuantumAlgorithms2021</bcf:citekey>
+    <bcf:citekey order="25" intorder="2">kroviImprovedQuantumAlgorithms2022</bcf:citekey>
+    <bcf:citekey order="26" intorder="1">garcia-ripollQuantuminspiredAlgorithmsMultivariate2021</bcf:citekey>
+    <bcf:citekey order="27" intorder="1">omalleyNeartermQuantumAlgorithm2022</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">jinQuantumSimulationPartial2022</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">jinQuantumSimulationPartial2022a</bcf:citekey>
+    <bcf:citekey order="30" intorder="1">criadoQadeSolvingDifferential2022</bcf:citekey>
+    <bcf:citekey order="31" intorder="1">bravo-prietoVariationalQuantumLinear2020</bcf:citekey>
+    <bcf:citekey order="32" intorder="1">arrazolaQuantumAlgorithmNonhomogeneous2019</bcf:citekey>
+    <bcf:citekey order="32" intorder="2">ricardoAlternativesNonhomogeneousPartial2022</bcf:citekey>
+    <bcf:citekey order="33" intorder="1">engelQuantumAlgorithmVlasov2019</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">bravo-prietoVariationalQuantumLinear2020</bcf:citekey>
+    <bcf:citekey order="34" intorder="2">satoVariationalQuantumAlgorithm2021</bcf:citekey>
+    <bcf:citekey order="34" intorder="3">aliPerformanceStudyVariational2022</bcf:citekey>
+    <bcf:citekey order="34" intorder="4">sahaAdvancingAlgorithmScale2022</bcf:citekey>
+    <bcf:citekey order="34" intorder="5">lubaschVariationalQuantumAlgorithms2020</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">cuiOptimizationNoiseAnalysis2022</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">caoQuantumAlgorithmCircuit2013</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">arrazolaQuantumAlgorithmNonhomogeneous2019</bcf:citekey>
+    <bcf:citekey order="37" intorder="2">ricardoAlternativesNonhomogeneousPartial2022</bcf:citekey>
+    <bcf:citekey order="37" intorder="3">liuVariationalQuantumAlgorithm2021</bcf:citekey>
+    <bcf:citekey order="37" intorder="4">wangQuantumFastPoisson2020</bcf:citekey>
+    <bcf:citekey order="37" intorder="5">ghafourpour2025applicability</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">jinQuantumSimulationSemiclassical2022</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">joubert-doriolVariationalApproachLinearly2022</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">jinQuantumSimulationSemiclassical2022</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">patelQuantumInspiredTensorNeural2022</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">leongVariationalQuantumEvolution2022</bcf:citekey>
+    <bcf:citekey order="42" intorder="2">albinoSolvingPartialDifferential2022</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">liuApplicationVariationalHybrid2022</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">lindenQuantumVsClassical2022</bcf:citekey>
+    <bcf:citekey order="44" intorder="2">jinQuantumSimulationPartial2022</bcf:citekey>
+    <bcf:citekey order="44" intorder="3">jinTimeComplexityAnalysis2022a</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">jinQuantumSimulationPartial2022a</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">fontanelaShortCommunicationQuantum2021</bcf:citekey>
+    <bcf:citekey order="46" intorder="2">miyamotoPricingMultiAssetDerivatives2022</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">jinQuantumSimulationPartial2022a</bcf:citekey>
+    <bcf:citekey order="47" intorder="2">anQuantumacceleratedMultilevelMonte2021</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">jinQuantumSimulationPartial2022a</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">garcia-ripollQuantuminspiredAlgorithmsMultivariate2021</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">patelQuantumInspiredTensorNeural2022</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">jinTimeComplexityAnalysis2022a</bcf:citekey>
+    <bcf:citekey order="51" intorder="2">jinQuantumAlgorithmsComputing2022</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">costaQuantumAlgorithmSimulating2019</bcf:citekey>
+    <bcf:citekey order="52" intorder="2">suauPracticalQuantumComputing2021</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">criadoQadeSolvingDifferential2022</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">costaQuantumAlgorithmSimulating2019</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">novikauQuantumSignalProcessing2022</bcf:citekey>
+    <bcf:citekey order="55" intorder="2">novikauSimulationLinearNonHermitian2022</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">costaQuantumAlgorithmSimulating2019</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">eweVariationalQuantumBasedSimulation2022</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">jinQuantumAlgorithmsComputing2022</bcf:citekey>
+    <bcf:citekey order="58" intorder="2">linKoopmanNeumannMechanics2022</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">leongVariationalQuantumEvolution2022</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">Vaszary2026solvingnonlinear</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">yeQuantuminspiredMethodSolving2022</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">moczCosmologicalSimulationsDark2021</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">garcia-molinaQuantumFourierAnalysis2022</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">lubaschVariationalQuantumAlgorithms2020</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">zylbermanHybridQuantumClassicalAlgorithm2022</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">ozSolvingBurgersEquation2021</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">leongVariationalQuantumEvolution2022</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">demirdjianVariationalQuantumSolutions2022</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">anEfficientQuantumAlgorithm2022</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">gaitanFindingFlowsNavier2020</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">leongVariationalQuantumEvolution2022</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">lapworthHybridQuantumClassicalCFD2022</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">jinTimeComplexityAnalysis2022</bcf:citekey>
+    <bcf:citekey order="73" intorder="2">jinQuantumAlgorithmsComputing2022</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">patelQuantumInspiredTensorNeural2022</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">sarsengeldinHybridClassicalQuantumFramework2022</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">kuboVariationalQuantumSimulations2020</bcf:citekey>
+    <bcf:citekey order="76" intorder="2">alghassiVariationalQuantumAlgorithm2022</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">anQuantumacceleratedMultilevelMonte2021</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">jinQuantumSimulationPartial2022a</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">garcia-ripollQuantuminspiredAlgorithmsMultivariate2021</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">jinQuantumSimulationPartial2022a</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">engelLinearEmbeddingNonlinear2021</bcf:citekey>
+    <bcf:citekey order="81" intorder="2">jinTimeComplexityAnalysis2022</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">liuEfficientQuantumAlgorithm2021</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">josephKoopmanNeumannApproach2020</bcf:citekey>
+    <bcf:citekey order="83" intorder="2">jinTimeComplexityAnalysis2022</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">linKoopmanNeumannMechanics2022</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">lloydQuantumAlgorithmNonlinear2020</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">hatifiQuantumWalkHydrodynamics2019</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">zylbermanHybridQuantumClassicalAlgorithm2022</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">montanaroQuantumAlgorithmsFinite2016</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">ljubomirQuantumAlgorithmNavier2022</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">andersonCommentsUnitaryQubit2022</bcf:citekey>
+    <bcf:citekey order="90" intorder="2">koukoutsisDysonMapsUnitary2022</bcf:citekey>
+    <bcf:citekey order="90" intorder="3">oganesovEffectFourierTransform2018</bcf:citekey>
+    <bcf:citekey order="90" intorder="4">ramReflectionTransmissionElectromagnetic2021</bcf:citekey>
+    <bcf:citekey order="90" intorder="5">vahalaBuildingThreedimensionalQuantum2020</bcf:citekey>
+    <bcf:citekey order="90" intorder="6">vahalaEffectPauliSpin2020</bcf:citekey>
+    <bcf:citekey order="90" intorder="7">vahalaOneTwodimensionalQuantum2021</bcf:citekey>
+    <bcf:citekey order="90" intorder="8">vahalaOneTwodimensionalQuantum2021a</bcf:citekey>
+    <bcf:citekey order="90" intorder="9">vahalaQuantumLatticeRepresentation2022a</bcf:citekey>
+    <bcf:citekey order="90" intorder="10">vahalaQubitUnitaryLattice2020</bcf:citekey>
+    <bcf:citekey order="90" intorder="11">vahalaQubitUnitaryLattice2020a</bcf:citekey>
+    <bcf:citekey order="90" intorder="12">vahalaTwoDimensionalElectromagnetic2021</bcf:citekey>
+    <bcf:citekey order="90" intorder="13">vahalaUnitaryQuantumLattice2020</bcf:citekey>
+    <bcf:citekey order="90" intorder="14">vahalaUnitaryQubitLattice2019</bcf:citekey>
+    <bcf:citekey order="90" intorder="15">yepezEfficientAccurateQuantum2002</bcf:citekey>
+    <bcf:citekey order="90" intorder="16">yepezRelativisticPathIntegral2005</bcf:citekey>
+    <bcf:citekey order="90" intorder="17">yepezQuantumLatticeGas2016</bcf:citekey>
+    <bcf:citekey order="90" intorder="18">vahalaQuantumLatticeGas2003</bcf:citekey>
+    <bcf:citekey order="90" intorder="19">vahalaUnitaryQubitLattice2011</bcf:citekey>
+    <bcf:citekey order="90" intorder="20">vahalaUnitaryQuantumLattice2010</bcf:citekey>
+    <bcf:citekey order="90" intorder="21">oganesovBenchmarkingDiracgeneratedUnitary2016</bcf:citekey>
+    <bcf:citekey order="90" intorder="22">oganesovImaginaryTimeIntegration2016</bcf:citekey>
+    <bcf:citekey order="90" intorder="23">oganesovUnitaryQuantumLattice2015</bcf:citekey>
+    <bcf:citekey order="90" intorder="24">shiSimulationsRelativisticQuantum2018</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
@@ -2481,12 +2558,13 @@
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
   <bcf:datalist section="0"
-                name="anyt/global//global/global"
+                name="anyt/global//global/global/global"
                 type="entry"
                 sortingtemplatename="anyt"
                 sortingnamekeytemplatename="global"
                 labelprefix=""
                 uniquenametemplatename="global"
-                labelalphanametemplatename="global">
+                labelalphanametemplatename="global"
+                namehashtemplatename="global">
   </bcf:datalist>
 </bcf:controlfile>

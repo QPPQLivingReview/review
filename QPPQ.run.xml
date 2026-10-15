@@ -80,6 +80,7 @@
     </requires>
     <requires type="editable">
       <file>QPPQ.bib</file>
+      <file>extra.bib</file>
     </requires>
   </external>
 </requests>
